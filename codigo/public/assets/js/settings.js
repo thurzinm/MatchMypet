@@ -1,5 +1,5 @@
 const API_PATH = '';
-const LOGIN_URL = '/modulos/login/login.html';
+const LOGIN_URL = '/index.html';
 
 const texts = {
     pt: {

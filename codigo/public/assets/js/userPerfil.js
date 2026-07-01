@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (!usuarioCorrente) {
     alert('Você precisa estar logado para acessar o perfil.');
-    window.location.href = '../login/login.html';
+    window.location.href = '/index.html';
     return;
   }
 
