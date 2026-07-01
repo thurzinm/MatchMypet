@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./assets/js/dark-mode.js"></script>
+    <title>MatchMyPet</title>
+    <link rel="stylesheet" href="./assets/css/about.css" />
+    <link rel="stylesheet" href="./assets/css/auth-header.css" />
+    <link rel="stylesheet" href="./assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+  </head>
+  <body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+      <div class="cabecalho-interno">
+        <a href="about.html" class="logotipo">
+          <span class="logotipo-icone">♥</span>
+          <span class="logotipo-texto">MatchMyPet</span>
+        </a>
+
+        <nav class="navegacao-desktop">
+          <a href="about.html">Início</a>
+          <a href="modulos/Arthur-Lopes-telas/talk.html">Match</a>
+          <a href="modulos/telas%20ronan/reportar.html">Reportar</a>
+          <a href="modulos/henrique-souza-telas/registroPet.html">Resgatar</a>
+          <a href="modulos/pedro-aguiar/index.html">Produtos</a>
+          <a href="modulos/clinicas-parceiros/clinicas.html">Clínicas</a>
+          <a href="modulos/henrique-souza-telas/ranking.html">Ranking</a>
+          <a href="modulos/clinicas-parceiros/parcerias.html">Parcerias</a>
+          <a href="equipe.html">Equipe</a>
+          <a href="modulos/telas%20ronan/contato.html">Contato</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+          <a href="modulos/login/login.html" class="botao-entrar link-auth" data-login-href="modulos/login/login.html">Entrar</a>
+          <a href="modulos/henrique-souza-telas/userPerfil.html" class="botao-perfil">👤 Perfil</a>
+        </div>
+
+        <button class="botao-menu" onclick="alternarMenu()">☰</button>
+      </div>
+
+      <nav class="navegacao-mobile" id="menuMobile">
+        <a href="about.html">Início</a>
+        <a href="modulos/Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="modulos/telas%20ronan/reportar.html">Reportar</a>
+        <a href="modulos/henrique-souza-telas/registroPet.html">Resgatar</a>
+        <a href="modulos/pedro-aguiar/index.html">Produtos</a>
+        <a href="modulos/clinicas-parceiros/clinicas.html">Clínicas</a>
+        <a href="modulos/henrique-souza-telas/ranking.html">Ranking</a>
+        <a href="modulos/clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="equipe.html">Equipe</a>
+        <a href="modulos/telas%20ronan/contato.html">Contato</a>
+        <div class="acoes-menu-mobile">
+          <a href="modulos/login/login.html" class="link-auth" data-login-href="modulos/login/login.html">Entrar</a>
+          <a href="modulos/henrique-souza-telas/userPerfil.html" class="botao-perfil-mobile">Perfil</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main>
+
+              <section class="destaque">
+        <div class="destaque-fundo">
+          <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1920&h=1080&fit=crop" alt="Cachorro feliz" />
+          <div class="destaque-escurecimento"></div>
+        </div>
+        <div class="destaque-conteudo">
+          <h1>Deslize, Conecte, Adote</h1>
+          <p>Encontre seu pet perfeito através de matches inteligentes</p>
+          <div class="destaque-botoes">
+            <a href="modulos/henrique-souza-telas/registroPet.html" class="botao-primario">Cadastrar Animal</a>
+            <a href="modulos/henrique-souza-telas/userPerfil.html" class="botao-secundario">Ver Perfil</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Números / Estatísticas -->
+      <section class="estatisticas">
+        <div class="container">
+          <div class="grade-estatisticas">
+            <div class="item-estatistica">
+              <span class="icone-estatistica">-</span>
+              <div class="numero-estatistica">x+</div>
+              <div class="descricao-estatistica">Animais Resgatados</div>
+            </div>
+            <div class="item-estatistica">
+              <span class="icone-estatistica">-</span>
+              <div class="numero-estatistica">x+</div>
+              <div class="descricao-estatistica">Adoções Realizadas</div>
+            </div>
+            <div class="item-estatistica">
+              <span class="icone-estatistica">-</span>
+              <div class="numero-estatistica">x+</div>
+              <div class="descricao-estatistica">Resgatadores Ativos</div>
+            </div>
+            <div class="item-estatistica">
+              <span class="icone-estatistica">-</span>
+              <div class="numero-estatistica">5+</div>
+              <div class="descricao-estatistica">Clínicas Parceiras</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Missão -->
+      <section class="missao">
+        <div class="container">
+          <div class="grade-missao">
+            <div class="texto-missao">
+              <h2>Nossa Missão</h2>
+              <p>O AdotaPet nasceu da necessidade de criar uma ponte entre pessoas que resgatam animais de rua e aquelas que desejam adotar. Acreditamos que todo animal merece uma segunda chance e um lar cheio de amor.</p>
+              <p>Nossa plataforma facilita o processo de adoção, oferecendo ferramentas para resgatadores cadastrarem animais, conectando-os com potenciais adotantes em todo o país.</p>
+              <a href="#" class="botao-rosa">Conhecer Animais</a>
+            </div>
+            <div class="imagem-missao">
+              <img src="https://images.unsplash.com/photo-1415369629372-26f2fe60c467?w=800&h=600&fit=crop" alt="Cuidando de animal" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Link para página da equipe -->
+      <section class="equipe-teaser">
+        <div class="container">
+          <div class="equipe-teaser-conteudo">
+            <h2>Nossa Equipe</h2>
+            <p>Pessoas dedicadas que trabalham todos os dias para salvar vidas e construir o MatchMyPet.</p>
+            <a href="equipe.html" class="botao-rosa">Conheça a equipe completa</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção Chamada para Ação -->
+      <section class="chamada-acao">
+        <div class="container conteudo-chamada">
+          <h2>Pronto para Fazer a Diferença?</h2>
+          <p>Junte-se a nós nessa missão de salvar vidas e criar histórias felizes</p>
+          <div class="botoes-chamada">
+            <a href="modulos/login/login.html" class="botao-branco">Criar Conta</a>
+            <a href="modulos/telas%20ronan/contato.html" class="botao-rosa-escuro">Entre em Contato</a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <div class="container">
+        <div class="grade-rodape">
+          <div class="marca-rodape">
+            <div class="logotipo-rodape">
+              <span class="logotipo-icone">♥</span>
+              <span>MatchMyPet</span>
+            </div>
+            <p>Deslize • Conecte • Adote. Encontre seu pet perfeito através de matches inteligentes.</p>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="about.html">Início</a></li>
+              <li><a href="modulos/Arthur-Lopes-telas/talk.html">Match</a></li>
+              <li><a href="modulos/telas%20ronan/reportar.html">Reportar</a></li>
+              <li><a href="modulos/henrique-souza-telas/ranking.html">Ranking</a></li>
+            </ul>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="modulos/pedro-aguiar/index.html">Produtos</a></li>
+              <li><a href="modulos/clinicas-parceiros/clinicas.html">Clínicas</a></li>
+              <li><a href="modulos/clinicas-parceiros/parcerias.html">Parcerias</a></li>
+              <li><a href="equipe.html">Equipe</a></li>
+              <li><a href="modulos/telas%20ronan/contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Redes Sociais</h3>
+            <div class="redes-sociais">
+              <a href="#">f</a>
+              <a href="#">in</a>
+              <a href="#">tw</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fundo-rodape">
+          <p>&copy; 2026 MatchMyPet. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function alternarMenu() {
+        const menu = document.getElementById('menuMobile');
+        menu.classList.toggle('aberto');
+      }
+    </script>
+    <script src="./assets/js/layout.js"></script>
+    <script src="./assets/js/auth-header.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,304 @@
+/* ── MatchMyPet — Responsividade global ── */
+
+html {
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 0;
+}
+
+img,
+video,
+svg,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, p, li {
+  overflow-wrap: break-word;
+}
+
+/* ── Containers e espaçamento mobile ── */
+@media (max-width: 767px) {
+  .container,
+  .cabecalho-interno {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .destaque {
+    height: min(85vh, 560px);
+    min-height: 360px;
+  }
+
+  .destaque-conteudo h1 {
+    font-size: clamp(1.75rem, 8vw, 2.5rem);
+  }
+
+  .chamada-acao {
+    padding: 2.5rem 1rem;
+  }
+
+  .chamada-acao h2 {
+    font-size: 1.5rem;
+  }
+
+  .chamada-icone {
+    font-size: 2.5rem;
+  }
+
+  .hero {
+    padding: 3rem 1rem !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  }
+
+  .form-section,
+  .faq-section {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  input:not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea,
+  .btn-submit,
+  .botao-primario,
+  .botao-secundario {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .btn-submit,
+  .botao-primario,
+  .botao-secundario,
+  .botao-menu,
+  .botao-menu-ronan {
+    min-height: 44px;
+  }
+}
+
+/* ── Ranking — cards de resgatadores ── */
+@media (max-width: 639px) {
+  .cartao-resgatador {
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .info-resgatador {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .stats-resgatador {
+    justify-content: center;
+  }
+
+  .pontuacao-resgatador {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ── Perfil — layout sidebar ── */
+@media (max-width: 767px) {
+  .layout-perfil,
+  .perfil-layout {
+    flex-direction: column !important;
+  }
+
+  .sidebar-perfil {
+    width: 100% !important;
+  }
+}
+
+/* ── Loja — modal carrinho ── */
+@media (max-width: 767px) {
+  .modal-carrinho {
+    padding: 0.75rem;
+    align-items: flex-end;
+  }
+
+  .modal-carrinho-conteudo {
+    max-height: 85vh;
+    overflow-y: auto;
+    border-radius: 1rem 1rem 0 0;
+  }
+}
+
+/* ── Tabelas (Bootstrap / legado) ── */
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .table {
+    font-size: 0.875rem;
+  }
+}
+
+/* ── Layout legado (styles.css) ── */
+@media (max-width: 768px) {
+  .barra-info {
+    flex-direction: column;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+
+  .menu ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menu li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 0.75rem 1rem;
+    height: auto;
+    line-height: 1.4;
+  }
+
+  .dados-usuario {
+    text-align: center;
+    margin: 0.5rem 0;
+    height: auto;
+    line-height: 1.4;
+  }
+
+  main {
+    padding: 1rem;
+  }
+}
+
+/* ── Header Ronan — menu mobile ── */
+.botao-menu-ronan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #374151;
+  padding: 0.25rem 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.nav-mobile-ronan {
+  display: none;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  background: #fff;
+}
+
+.nav-mobile-ronan.aberto {
+  display: flex;
+}
+
+.nav-mobile-ronan a {
+  padding: 0.625rem 0;
+  font-size: 0.875rem;
+  color: #555;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-mobile-ronan a:hover,
+.nav-mobile-ronan a.active,
+.nav-mobile-ronan a.ativo {
+  color: #e84393;
+}
+
+.acoes-menu-mobile-ronan {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #eee;
+}
+
+.acoes-menu-mobile-ronan .btn-perfil {
+  justify-content: center;
+}
+
+@media (max-width: 1023px) {
+  header .header-inner {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header .header-inner nav.nav-desktop {
+    display: none;
+  }
+
+  header .header-actions {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .botao-menu-ronan {
+    display: none;
+  }
+
+  .nav-mobile-ronan {
+    display: none !important;
+  }
+}
+
+/* ── Utilitários ── */
+@media (max-width: 767px) {
+  .ocultar-mobile {
+    display: none !important;
+  }
+
+  .grade-produtos,
+  .grade-clinicas,
+  .grade-beneficios {
+    gap: 1rem;
+  }
+
+  .chamada-acao h2 {
+    font-size: 1.35rem;
+  }
+
+  .podio-ranking,
+  .grade-podio {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .config-wrap {
+    padding: 0 1rem;
+  }
+
+  .login-card,
+  .login-container {
+    padding: 1.5rem 1rem;
+    margin: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .ocultar-desktop {
+    display: none !important;
+  }
+}

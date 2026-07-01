@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../assets/js/dark-mode.js"></script>
+    <title>Cadastrar Animal - MatchMyPet</title>
+    <link rel="stylesheet" href="../../assets/css/registroPet.css" />
+    <link rel="stylesheet" href="../../assets/css/auth-header.css" />
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+  <body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+      <div class="cabecalho-interno">
+        <a href="../../about.html" class="logotipo">
+          <span class="logotipo-icone">♥</span>
+          <span class="logotipo-texto">MatchMyPet</span>
+        </a>
+
+        <nav class="navegacao-desktop">
+          <a href="../../about.html">Início</a>
+          <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+          <a href="../telas%20ronan/reportar.html">Reportar</a>
+          <a href="registroPet.html">Resgatar</a>
+          <a href="../pedro-aguiar/index.html">Produtos</a>
+          <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+          <a href="ranking.html">Ranking</a>
+          <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+          <a href="../telas%20ronan/contato.html">Contato</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+          <a href="../login/login.html" class="botao-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="userPerfil.html" class="botao-perfil">👤 Perfil</a>
+        </div>
+
+        <button class="botao-menu" onclick="alternarMenu()">☰</button>
+      </div>
+
+      <nav class="navegacao-mobile" id="menuMobile">
+        <a href="../../about.html">Início</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="../telas%20ronan/reportar.html">Reportar</a>
+        <a href="registroPet.html">Resgatar</a>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="../telas%20ronan/contato.html">Contato</a>
+        <div class="acoes-menu-mobile">
+          <a href="../login/login.html" class="link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="userPerfil.html" class="botao-perfil-mobile">Perfil</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="pagina">
+      <div class="container">
+        <div class="cartao-formulario">
+          <h1>Cadastrar Animal para Adoção</h1>
+          <p class="subtitulo">Preencha as informações abaixo para disponibilizar o animal para adoção</p>
+
+          <form id="formularioCadastro" class="formulario">
+
+            <!-- Upload de Fotos -->
+            <div class="campo">
+              <label for="uploadFotos">Fotos do Animal *</label>
+              <div class="area-upload" id="areaUpload">
+                <input type="file" accept="image/*" multiple id="uploadFotos" class="input-arquivo" />
+                <label for="uploadFotos" class="label-upload">
+                  <span class="icone-upload">⬆</span>
+                  <p>Clique para fazer upload ou arraste as fotos aqui</p>
+                  <p class="texto-pequeno">PNG, JPG até 10MB</p>
+                </label>
+              </div>
+              <div class="grade-previews" id="gradePreviews"></div>
+            </div>
+
+            <!-- Tipo de Animal -->
+            <div class="campo">
+              <label for="tipoAnimal">Tipo de Animal *</label>
+              <select id="tipoAnimal" required>
+                <option value="">Selecione</option>
+                <option value="Cachorro">Cachorro</option>
+                <option value="Gato">Gato</option>
+                <option value="Calopsita">Calopsita</option>
+                <option value="Periquito">Periquito</option>
+                <option value="Papagaio">Papagaio</option>
+                <option value="Canário">Canário</option>
+              </select>
+            </div>
+
+            <!-- Nome -->
+            <div class="campo">
+              <label for="nomeAnimal">Nome do Animal *</label>
+              <input type="text" id="nomeAnimal" required placeholder="Ex: Max" />
+            </div>
+
+            <!-- Idade e Porte -->
+            <div class="grade-dois-campos">
+              <div class="campo">
+                <label for="idadeAnimal">Idade *</label>
+                <input type="text" id="idadeAnimal" required placeholder="Ex: 2 anos" />
+              </div>
+              <div class="campo">
+                <label for="porteAnimal">Porte *</label>
+                <select id="porteAnimal" required>
+                  <option value="">Selecione</option>
+                  <option value="Pequeno">Pequeno</option>
+                  <option value="Médio">Médio</option>
+                  <option value="Grande">Grande</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Gênero e Peso -->
+            <div class="grade-dois-campos">
+              <div class="campo">
+                <label for="generoAnimal">Gênero *</label>
+                <select id="generoAnimal" required>
+                  <option value="">Selecione</option>
+                  <option value="Macho">Macho</option>
+                  <option value="Fêmea">Fêmea</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="pesoAnimal">Peso</label>
+                <input type="text" id="pesoAnimal" placeholder="Ex: 15kg" />
+              </div>
+            </div>
+
+            <!-- Localização -->
+            <div class="campo">
+              <label for="localizacao">Localização *</label>
+              <input type="text" id="localizacao" required placeholder="Ex: São Paulo, SP" />
+            </div>
+
+            <!-- Saúde -->
+            <div class="campo">
+              <label for="saude">Condição de Saúde *</label>
+              <input type="text" id="saude" required placeholder="Ex: Vacinado, castrado e vermifugado" />
+            </div>
+
+            <!-- Temperamento -->
+            <div class="campo">
+              <label for="temperamento">Temperamento</label>
+              <input type="text" id="temperamento" placeholder="Ex: Dócil, brincalhão e sociável" />
+            </div>
+
+            <!-- Descrição -->
+            <div class="campo">
+              <label for="descricao">Descrição *</label>
+              <textarea id="descricao" required rows="5" placeholder="Conte a história do animal, características e informações importantes..."></textarea>
+            </div>
+
+            <!-- Botões -->
+            <div class="grupo-botoes">
+              <button type="submit" class="botao-cadastrar">Cadastrar Animal</button>
+              <button type="button" class="botao-cancelar" onclick="history.back()">Cancelar</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <div class="container">
+        <div class="grade-rodape">
+          <div class="marca-rodape">
+            <div class="logotipo-rodape">
+              <span class="logotipo-icone">♥</span>
+              <span>MatchMyPet</span>
+            </div>
+            <p>Deslize • Conecte • Adote. Encontre seu pet perfeito através de matches inteligentes.</p>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../../about.html">Início</a></li>
+              <li><a href="../Arthur-Lopes-telas/talk.html">Match</a></li>
+              <li><a href="../telas%20ronan/reportar.html">Reportar</a></li>
+              <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="../pedro-aguiar/index.html">Produtos</a></li>
+              <li><a href="../clinicas-parceiros/clinicas.html">Clínicas</a></li>
+              <li><a href="../clinicas-parceiros/parcerias.html">Parcerias</a></li>
+              <li><a href="../telas%20ronan/contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Redes Sociais</h3>
+            <div class="redes-sociais">
+              <a href="#">f</a>
+              <a href="#">in</a>
+              <a href="#">tw</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fundo-rodape">
+          <p>&copy; 2026 MatchMyPet. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function alternarMenu() {
+        document.getElementById('menuMobile').classList.toggle('aberto');
+      }
+    </script>
+    <script src="../../assets/js/registroPet.js"></script>
+    <script src="../../assets/js/layout.js"></script>
+    <script src="../../assets/js/auth-header.js"></script>
+  </body>
+</html>

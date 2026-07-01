@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../assets/js/dark-mode.js"></script>
+    <title>Ranking - MatchMyPet</title>
+    <link rel="stylesheet" href="../../assets/css/ranking.css" />
+    <link rel="stylesheet" href="../../assets/css/auth-header.css" />
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+  <body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+      <div class="cabecalho-interno">
+        <a href="../../about.html" class="logotipo">
+          <span class="logotipo-icone">♥</span>
+          <span class="logotipo-texto">MatchMyPet</span>
+        </a>
+
+        <nav class="navegacao-desktop">
+          <a href="../../about.html">Início</a>
+          <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+          <a href="../telas%20ronan/reportar.html">Reportar</a>
+          <a href="registroPet.html">Resgatar</a>
+          <a href="../pedro-aguiar/index.html">Produtos</a>
+          <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+          <a href="ranking.html">Ranking</a>
+          <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+          <a href="../telas%20ronan/contato.html">Contato</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+          <a href="../login/login.html" class="botao-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="userPerfil.html" class="botao-perfil">👤 Perfil</a>
+        </div>
+
+        <button class="botao-menu" onclick="alternarMenu()">☰</button>
+      </div>
+
+      <nav class="navegacao-mobile" id="menuMobile">
+        <a href="../../about.html">Início</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="../telas%20ronan/reportar.html">Reportar</a>
+        <a href="registroPet.html">Resgatar</a>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="../telas%20ronan/contato.html">Contato</a>
+        <div class="acoes-menu-mobile">
+          <a href="../login/login.html" class="link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="userPerfil.html" class="botao-perfil-mobile">Perfil</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Topo da página -->
+    <div class="topo-pagina">
+      <div class="container topo-conteudo">
+        <span class="topo-icone">🏆</span>
+        <h1>Ranking & Histórias de Sucesso</h1>
+        <p>Celebrando quem faz a diferença e os matches perfeitos</p>
+      </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="pagina">
+      <div class="container">
+
+        <!-- Top Resgatadores -->
+        <section class="secao">
+          <div class="titulo-secao">
+            <div class="titulo-icone">♥</div>
+            <h2>Top Resgatadores</h2>
+          </div>
+
+          <div class="lista-resgatadores">
+          </div>
+        </section>
+
+        <!-- Casos de Sucesso -->
+        <section class="secao">
+          <div class="titulo-secao">
+            <div class="titulo-icone">✨</div>
+            <h2>Casos de Sucesso</h2>
+          </div>
+
+          <div class="grade-historias">
+
+            <div class="cartao-historia">
+              <div class="historia-foto">
+                <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&h=400&fit=crop" alt="Max" />
+                <span class="badge-match">★ 98% match</span>
+              </div>
+              <div class="historia-conteudo">
+                <div class="historia-cabecalho">
+                  <h3>Max</h3>
+                  <span class="historia-data">15 dias atrás</span>
+                </div>
+                <div class="historia-pessoas">
+                  <div class="pessoa">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Roberto Ferreira" />
+                    <div>
+                      <p class="pessoa-label">Adotado por</p>
+                      <p class="pessoa-nome">Roberto Ferreira</p>
+                    </div>
+                  </div>
+                  <div class="divisor"></div>
+                  <div>
+                    <p class="pessoa-label">Resgatado por</p>
+                    <p class="pessoa-nome">Maria Costa</p>
+                  </div>
+                </div>
+                <p class="historia-texto">Max encontrou seu lar perfeito! Roberto sempre quis um companheiro para suas caminhadas matinais e Max é o parceiro ideal. Uma história de amor à primeira vista através do match!</p>
+                <div class="historia-rodape">♥ Match Perfeito!</div>
+              </div>
+            </div>
+
+            <div class="cartao-historia">
+              <div class="historia-foto">
+                <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=400&h=400&fit=crop" alt="Luna" />
+                <span class="badge-match">★ 95% match</span>
+              </div>
+              <div class="historia-conteudo">
+                <div class="historia-cabecalho">
+                  <h3>Luna</h3>
+                  <span class="historia-data">1 mês atrás</span>
+                </div>
+                <div class="historia-pessoas">
+                  <div class="pessoa">
+                    <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=200&h=200&fit=crop" alt="Márcia Oliveira" />
+                    <div>
+                      <p class="pessoa-label">Adotado por</p>
+                      <p class="pessoa-nome">Márcia Oliveira</p>
+                    </div>
+                  </div>
+                  <div class="divisor"></div>
+                  <div>
+                    <p class="pessoa-label">Resgatado por</p>
+                    <p class="pessoa-nome">João Silva</p>
+                  </div>
+                </div>
+                <p class="historia-texto">Luna trouxe alegria para a vida de Márcia após momentos difíceis. O match foi perfeito - ambas calmas e carinhosas. Hoje são inseparáveis!</p>
+                <div class="historia-rodape">♥ Match Perfeito!</div>
+              </div>
+            </div>
+
+            <div class="cartao-historia">
+              <div class="historia-foto">
+                <img src="https://images.unsplash.com/photo-1568572933382-74d440642117?w=400&h=400&fit=crop" alt="Thor" />
+                <span class="badge-match">★ 97% match</span>
+              </div>
+              <div class="historia-conteudo">
+                <div class="historia-cabecalho">
+                  <h3>Thor</h3>
+                  <span class="historia-data">2 meses atrás</span>
+                </div>
+                <div class="historia-pessoas">
+                  <div class="pessoa">
+                    <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" alt="Família Almeida" />
+                    <div>
+                      <p class="pessoa-label">Adotado por</p>
+                      <p class="pessoa-nome">Família Almeida</p>
+                    </div>
+                  </div>
+                  <div class="divisor"></div>
+                  <div>
+                    <p class="pessoa-label">Resgatado por</p>
+                    <p class="pessoa-nome">Ana Paula</p>
+                  </div>
+                </div>
+                <p class="historia-texto">Thor é agora o protetor oficial da família Almeida. Adora as crianças e se adaptou perfeitamente à rotina da família. Um match que mudou vidas!</p>
+                <div class="historia-rodape">♥ Match Perfeito!</div>
+              </div>
+            </div>
+
+            <div class="cartao-historia">
+              <div class="historia-foto">
+                <img src="https://images.unsplash.com/photo-1477884213360-7e9d7dcc1e48?w=400&h=400&fit=crop" alt="Mel" />
+                <span class="badge-match">★ 96% match</span>
+              </div>
+              <div class="historia-conteudo">
+                <div class="historia-cabecalho">
+                  <h3>Mel</h3>
+                  <span class="historia-data">3 meses atrás</span>
+                </div>
+                <div class="historia-pessoas">
+                  <div class="pessoa">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="Pedro Santos" />
+                    <div>
+                      <p class="pessoa-label">Adotado por</p>
+                      <p class="pessoa-nome">Pedro Santos</p>
+                    </div>
+                  </div>
+                  <div class="divisor"></div>
+                  <div>
+                    <p class="pessoa-label">Resgatado por</p>
+                    <p class="pessoa-nome">Carlos Mendes</p>
+                  </div>
+                </div>
+                <p class="historia-texto">Mel cresceu e se transformou em uma cachorrinha linda e saudável. Pedro documenta cada momento da jornada deles juntos. Um match inesquecível!</p>
+                <div class="historia-rodape">♥ Match Perfeito!</div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Chamada para Ação -->
+        <section class="chamada-acao">
+          <span class="chamada-icone">📈</span>
+          <h2>Quer aparecer no ranking?</h2>
+          <p>Continue resgatando e fazendo matches perfeitos. Cada vida salva conta!</p>
+          <div class="chamada-botoes">
+            <a href="registroPet.html" class="botao-branco">Cadastrar Resgate</a>
+            <a href="../Arthur-Lopes-telas/talk.html" class="botao-escuro">Fazer Match</a>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <div class="container">
+        <div class="grade-rodape">
+          <div class="marca-rodape">
+            <div class="logotipo-rodape">
+              <span class="logotipo-icone">♥</span>
+              <span>MatchMyPet</span>
+            </div>
+            <p>Deslize • Conecte • Adote. Encontre seu pet perfeito através de matches inteligentes.</p>
+          </div>
+          <div class="coluna-rodape">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../../about.html">Início</a></li>
+              <li><a href="../Arthur-Lopes-telas/talk.html">Match</a></li>
+              <li><a href="../telas%20ronan/reportar.html">Reportar</a></li>
+              <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+          </div>
+          <div class="coluna-rodape">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="../pedro-aguiar/index.html">Produtos</a></li>
+              <li><a href="../clinicas-parceiros/clinicas.html">Clínicas</a></li>
+              <li><a href="../clinicas-parceiros/parcerias.html">Parcerias</a></li>
+              <li><a href="../telas%20ronan/contato.html">Contato</a></li>
+            </ul>
+          </div>
+          <div class="coluna-rodape">
+            <h3>Redes Sociais</h3>
+            <div class="redes-sociais">
+              <a href="#">f</a>
+              <a href="#">in</a>
+              <a href="#">tw</a>
+            </div>
+          </div>
+        </div>
+        <div class="fundo-rodape">
+          <p>&copy; 2026 AdotaPet. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function alternarMenu() {
+        document.getElementById('menuMobile').classList.toggle('aberto');
+      }
+    </script>
+    <script src="../../assets/js/layout.js"></script>
+    <script src="../../assets/js/auth-header.js"></script>
+
+  </body>
+</html>

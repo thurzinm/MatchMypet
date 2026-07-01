@@ -1,0 +1,45 @@
+.botao-sair,
+a.botao-sair {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  color: #374151;
+  cursor: pointer;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.botao-sair:hover {
+  color: #dc2626;
+}
+
+.icone-sair {
+  display: inline-flex;
+  align-items: center;
+  line-height: 0;
+}
+
+.icone-sair svg {
+  display: block;
+}
+
+.acoes-menu-mobile .botao-sair {
+  padding: 0.5rem 0;
+}
+
+/* ── Link ativo no menu de navegação ── */
+.navegacao-desktop a.ativo,
+.navegacao-mobile a.ativo,
+header .header-inner nav a.ativo,
+header .header-inner nav a.active {
+  color: var(--rosa, #ec4899) !important;
+  font-weight: 600;
+}
+
+html.dark-mode .navegacao-desktop a.ativo,
+html.dark-mode .navegacao-mobile a.ativo,
+html.dark-mode header .header-inner nav a.ativo,
+html.dark-mode header .header-inner nav a.active {
+  color: var(--rosa, #ec4899) !important;
+}

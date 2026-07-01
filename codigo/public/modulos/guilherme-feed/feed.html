@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MatchMyPet | Feed de Animais</title>
+  <link rel="stylesheet" href="feed_style.css" />
+</head>
+<body>
+  <header class="topbar">
+  <a class="brand" href="#">
+    <img src="assets/logo_minimalista.png" alt="Logo MatchMyPet" class="logo">
+    <span>MatchMyPet</span>
+  </a>
+  <nav class="nav-menu">
+    <a class="active" href="#">Match</a>
+    <a href="#">Perfil do Pet</a>
+  </nav>
+</header>
+
+  <main class="page">
+    <section class="match-section">
+      <p class="swipe-hint">Gostou do amiguinhho de 4 patas? Deslize para a direita! <span>❤</span></p>
+
+      <div class="match-content">
+        <button id="btnPassar" class="floating-action reject" aria-label="Passar animal">×</button>
+
+        <article id="petCard" class="pet-card" tabindex="0" aria-label="Abrir perfil do pet">
+          <div class="photo-area">
+            <img id="petFoto" src="" alt="Foto do pet" />
+            <div id="petStatus" class="status-pill">Disponível para adoção</div>
+            <button id="btnInfo" class="info-button" aria-label="Ver perfil completo do pet">i</button>
+          </div>
+
+          <div class="card-body">
+            <h1 id="petNome">Nome</h1>
+            <p id="petLocalizacao" class="location">⌖ Localização</p>
+            <div id="petTags" class="tags"></div>
+
+            <div class="short-info">
+              <div><strong>Idade</strong><span id="petIdade">-</span></div>
+              <div><strong>Porte</strong><span id="petPorte">-</span></div>
+              <div><strong>Raça</strong><span id="petRaca">-</span></div>
+            </div>
+          </div>
+        </article>
+
+        <button id="btnGostei" class="floating-action approve" aria-label="Gostei do animal">♥</button>
+      </div>
+
+      <div class="bottom-actions">
+        <button id="btnPassarMobile" class="round-action reject">×</button>
+        <button id="btnGosteiMobile" class="round-action approve">♥</button>
+      </div>
+
+      <div class="feed-status">
+        <span id="contadorPets">1 de 1</span>
+        <button id="btnReiniciar" class="text-button">Reiniciar feed</button>
+      </div>
+    </section>
+  </main>
+
+  <section id="modalPerfil" class="modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <article class="modal-card">
+      <button id="btnFecharModal" class="close-button" aria-label="Fechar perfil">×</button>
+
+      <div class="profile-image">
+        <img id="perfilFoto" src="" alt="Foto do pet no perfil" />
+      </div>
+
+      <div class="profile-info">
+        <p class="section-label">Perfil do Pet</p>
+        <h2 id="perfilNome">Nome</h2>
+        <p id="perfilResumo" class="profile-subtitle">Tipo • Raça • Porte • Idade</p>
+        <div id="perfilTags" class="profile-tags"></div>
+        <p id="perfilDescricao" class="description"></p>
+
+        <div class="profile-grid">
+          <div><strong>Localização</strong><span id="perfilLocalizacao">-</span></div>
+          <div><strong>Responsável</strong><span id="perfilResponsavel">-</span></div>
+          <div><strong>Status</strong><span id="perfilStatus">-</span></div>
+          <div><strong>Contato</strong><span id="perfilContato">-</span></div>
+        </div>
+
+        <div class="profile-actions">
+          <button id="btnTenhoInteresse" class="btn primary">Tenho interesse</button>
+          <button id="btnSalvarPerfil" class="btn secondary">Salvar perfil</button>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="feed_script.js"></script>
+</body>
+</html>

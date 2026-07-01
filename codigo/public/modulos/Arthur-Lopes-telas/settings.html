@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../assets/js/dark-mode.js"></script>
+    <title>Configurações - MatchMyPet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/userPerfil.css">
+    <link rel="stylesheet" href="../../assets/css/auth-header.css">
+    <link rel="stylesheet" href="../../assets/css/settings.css">
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <div class="cabecalho-interno">
+            <a href="../../about.html" class="logotipo">
+                <span class="logotipo-icone">♥</span>
+                <span class="logotipo-texto">MatchMyPet</span>
+            </a>
+
+            <nav class="navegacao-desktop">
+                <a href="../../about.html">Início</a>
+                <a href="talk.html">Match</a>
+                <a href="../telas%20ronan/reportar.html">Reportar</a>
+                <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+                <a href="../pedro-aguiar/index.html">Produtos</a>
+                <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+                <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+                <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+                <a href="../telas%20ronan/contato.html">Contato</a>
+            </nav>
+
+            <div class="acoes-cabecalho">
+                <a href="../login/login.html" class="botao-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+                <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil">👤 Perfil</a>
+            </div>
+
+            <button class="botao-menu" type="button" onclick="alternarMenu()" aria-label="Abrir menu">☰</button>
+        </div>
+
+        <nav class="navegacao-mobile" id="menuMobile">
+            <a href="../../about.html">Início</a>
+            <a href="talk.html">Match</a>
+            <a href="../telas%20ronan/reportar.html">Reportar</a>
+            <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+            <a href="../pedro-aguiar/index.html">Produtos</a>
+            <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+            <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+            <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+            <a href="../telas%20ronan/contato.html">Contato</a>
+            <div class="acoes-menu-mobile">
+                <a href="../login/login.html" class="link-auth" data-login-href="../login/login.html">Entrar</a>
+                <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil-mobile">Perfil</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="pagina-config">
+        <div class="config-wrap">
+
+            <div class="config-topo">
+                <div class="config-topo-esq">
+                    <a href="../henrique-souza-telas/userPerfil.html" class="config-voltar" aria-label="Voltar ao perfil">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </a>
+                    <div>
+                        <h1 id="pageTitle">Configurações</h1>
+                        <p class="config-subtitulo">Gerencie sua conta e preferências</p>
+                    </div>
+                </div>
+                <button type="button" class="save-btn save-btn--topo" id="saveBtn">Salvar Alterações</button>
+            </div>
+
+            <div id="feedback" class="feedback-message" role="status" hidden></div>
+
+            <div class="config-painel" id="profileBanner">
+                <div class="profile-avatar" id="profileAvatar">?</div>
+                <div class="config-painel-info">
+                    <strong id="profileName">Usuário</strong>
+                    <span id="profileLogin">@usuario</span>
+                </div>
+                <span class="config-badge" id="profileRole">Adotador</span>
+            </div>
+
+            <nav class="config-abas" aria-label="Seções de configuração">
+                <a href="#sec-preferencias" class="config-aba ativo">
+                    <span data-i18n="preferences">Preferências</span>
+                </a>
+                <a href="#sec-pessoal" class="config-aba">
+                    <span data-i18n="personalInfo">Pessoal</span>
+                </a>
+                <a href="#sec-contato" class="config-aba">
+                    <span data-i18n="contact">Contato</span>
+                </a>
+                <a href="#sec-seguranca" class="config-aba">
+                    <span data-i18n="security">Segurança</span>
+                </a>
+            </nav>
+
+            <form id="settingsForm" class="settings-form">
+
+                <section id="sec-preferencias" class="config-secao">
+                    <h2 class="config-secao-titulo" data-i18n="preferences">Preferências</h2>
+
+                    <div class="config-campo-linha">
+                        <div>
+                            <span class="config-campo-label" data-i18n="darkMode">Modo Escuro</span>
+                            <span class="config-campo-hint">Interface com menos brilho</span>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="config-campos-grid">
+                        <div class="input-field">
+                            <label for="langFilter" data-i18n="language">Idioma</label>
+                            <select id="langFilter">
+                                <option value="pt">Português (BR)</option>
+                                <option value="en">English (US)</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="roleFilter" data-i18n="profile">Perfil</label>
+                            <select id="roleFilter">
+                                <option value="Adotador">Adotador</option>
+                                <option value="Resgatador">Resgatador</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sec-pessoal" class="config-secao">
+                    <h2 class="config-secao-titulo" data-i18n="personalInfo">Informações Pessoais</h2>
+
+                    <div class="config-campos-grid">
+                        <div class="input-field">
+                            <label for="nomeCompleto" data-i18n="fullName">Nome Completo</label>
+                            <input type="text" id="nomeCompleto" placeholder="Seu nome aqui" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="nomeUsuario" data-i18n="username">Nome de Usuário</label>
+                            <input type="text" id="nomeUsuario" placeholder="@usuario" required>
+                        </div>
+                    </div>
+                    <div class="input-field">
+                        <label for="bio" data-i18n="bio">Bio</label>
+                        <textarea id="bio" rows="3" placeholder="Conte um pouco sobre você..."></textarea>
+                    </div>
+                </section>
+
+                <section id="sec-contato" class="config-secao">
+                    <h2 class="config-secao-titulo" data-i18n="contact">Contato</h2>
+
+                    <div class="config-campos-grid">
+                        <div class="input-field">
+                            <label for="email" data-i18n="email">E-mail</label>
+                            <input type="email" id="email" placeholder="email@exemplo.com" required>
+                        </div>
+                        <div class="input-field">
+                            <label for="campo-telefone" data-i18n="phone">Telefone</label>
+                            <input type="tel" id="campo-telefone" placeholder="(00) 00000-0000" maxlength="15">
+                        </div>
+                    </div>
+                </section>
+
+                <section id="sec-seguranca" class="config-secao">
+                    <h2 class="config-secao-titulo" data-i18n="security">Segurança</h2>
+                    <p class="section-hint" data-i18n="securityHint">Deixe em branco se não quiser alterar a senha.</p>
+
+                    <div class="input-field">
+                        <label for="senhaAtual" data-i18n="currentPassword">Senha Atual</label>
+                        <div class="password-wrap">
+                            <input type="password" id="senhaAtual" autocomplete="current-password" placeholder="••••••••">
+                            <button type="button" class="toggle-password" data-target="senhaAtual" aria-label="Mostrar senha">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="config-campos-grid">
+                        <div class="input-field">
+                            <label for="novaSenha" data-i18n="newPassword">Nova Senha</label>
+                            <div class="password-wrap">
+                                <input type="password" id="novaSenha" autocomplete="new-password" placeholder="••••••••">
+                                <button type="button" class="toggle-password" data-target="novaSenha" aria-label="Mostrar senha">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <label for="confirmarSenha" data-i18n="confirmPassword">Confirmar Senha</label>
+                            <div class="password-wrap">
+                                <input type="password" id="confirmarSenha" autocomplete="new-password" placeholder="••••••••">
+                                <button type="button" class="toggle-password" data-target="confirmarSenha" aria-label="Mostrar senha">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </form>
+
+            <footer class="config-rodape-mobile" id="settingsFooter">
+                <a href="../henrique-souza-telas/userPerfil.html" class="btn-secundario">Cancelar</a>
+                <button type="button" class="save-btn" id="saveBtnMobile">Salvar Alterações</button>
+            </footer>
+
+        </div>
+    </main>
+
+    <script>
+        function alternarMenu() {
+            document.getElementById('menuMobile').classList.toggle('aberto');
+        }
+    </script>
+    <script src="../../assets/js/layout.js"></script>
+    <script src="../../assets/js/auth-header.js"></script>
+    <script src="../../assets/js/settings.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../assets/js/dark-mode.js"></script>
+    <title>Clínicas Parceiras - MatchMyPet</title>
+    <link rel="stylesheet" href="../../assets/css/clinicas-parceiros.css" />
+    <link rel="stylesheet" href="../../assets/css/auth-header.css" />
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="cabecalho-interno">
+        <a href="../../about.html" class="logotipo">
+          <span class="logotipo-icone">♥</span>
+          <span class="logotipo-texto">MatchMyPet</span>
+        </a>
+
+        <nav class="navegacao-desktop">
+          <a href="../../about.html">Início</a>
+          <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+          <a href="../telas%20ronan/reportar.html">Reportar</a>
+          <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+          <a href="../pedro-aguiar/index.html">Produtos</a>
+          <a href="clinicas.html">Clínicas</a>
+          <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+          <a href="parcerias.html">Parcerias</a>
+          <a href="../telas%20ronan/contato.html">Contato</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+          <a href="../login/login.html" class="botao-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil">👤 Perfil</a>
+        </div>
+
+        <button class="botao-menu" onclick="alternarMenu()">☰</button>
+      </div>
+
+      <nav class="navegacao-mobile" id="menuMobile">
+        <a href="../../about.html">Início</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="../telas%20ronan/reportar.html">Reportar</a>
+        <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="clinicas.html">Clínicas</a>
+        <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+        <a href="parcerias.html">Parcerias</a>
+        <a href="../telas%20ronan/contato.html">Contato</a>
+        <div class="acoes-menu-mobile">
+          <a href="../login/login.html" class="link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil-mobile">Perfil</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="topo-pagina">
+      <div class="container topo-conteudo">
+        <span class="topo-icone">🏥</span>
+        <h1>Clínicas Veterinárias Parceiras</h1>
+        <p>Cuidado de qualidade para o seu pet com descontos exclusivos para quem adota pela plataforma</p>
+      </div>
+    </div>
+
+    <main class="pagina">
+      <div class="container">
+
+        <div class="destaque-beneficio">
+          <span class="destaque-beneficio-icone">🎁</span>
+          <div>
+            <h2>20% de desconto para animais adotados</h2>
+            <p>Adotou um pet pelo MatchMyPet? Apresente o comprovante de adoção em qualquer clínica parceira e ganhe 20% de desconto em consultas e procedimentos.</p>
+          </div>
+        </div>
+
+        <div class="barra-filtros">
+          <span class="contador-itens" id="contador-clinicas">Carregando...</span>
+          <select class="filtro-select" id="filtro-especialidade">
+            <option value="todas">Todas as especialidades</option>
+            <option value="Consultas">Consultas</option>
+            <option value="Cirurgia">Cirurgia</option>
+            <option value="Vacinação">Vacinação</option>
+            <option value="Emergência">Emergência</option>
+            <option value="Exames">Exames</option>
+          </select>
+        </div>
+
+        <div class="grade-clinicas" id="grade-clinicas"></div>
+
+        <section class="chamada-acao">
+          <span class="chamada-icone">🤝</span>
+          <h2>Sua clínica quer ser parceira?</h2>
+          <p>Junte-se à nossa rede e ajude a cuidar dos pets adotados pela plataforma. Entre em contato e saiba como participar.</p>
+          <a href="../telas%20ronan/contato.html" class="botao-branco">Quero ser parceiro</a>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <div class="container">
+        <div class="grade-rodape">
+          <div class="marca-rodape">
+            <div class="logotipo-rodape">
+              <span class="logotipo-icone">♥</span>
+              <span>MatchMyPet</span>
+            </div>
+            <p>Deslize • Conecte • Adote. Encontre seu pet perfeito através de matches inteligentes.</p>
+          </div>
+          <div class="coluna-rodape">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../../about.html">Início</a></li>
+              <li><a href="../Arthur-Lopes-telas/talk.html">Match</a></li>
+              <li><a href="../telas%20ronan/reportar.html">Reportar</a></li>
+              <li><a href="../henrique-souza-telas/ranking.html">Ranking</a></li>
+            </ul>
+          </div>
+          <div class="coluna-rodape">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="../pedro-aguiar/index.html">Produtos</a></li>
+              <li><a href="clinicas.html">Clínicas</a></li>
+              <li><a href="parcerias.html">Parcerias</a></li>
+              <li><a href="../telas%20ronan/contato.html">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fundo-rodape">
+          <p>&copy; 2026 AdotaPet. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function alternarMenu() {
+        document.getElementById('menuMobile').classList.toggle('aberto');
+      }
+    </script>
+    <script src="../../assets/js/clinicas.js"></script>
+    <script src="../../assets/js/layout.js"></script>
+    <script src="../../assets/js/auth-header.js"></script>
+  </body>
+</html>

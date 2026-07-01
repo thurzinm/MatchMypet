@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../assets/js/dark-mode.js"></script>
+  <title>Contato - MatchMyPet</title>
+  <link rel="stylesheet" href="contato.css">
+  <link rel="stylesheet" href="../../assets/css/auth-header.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="../../about.html" class="logo">
+        <span class="logo-icon">&#10084;</span>
+        <span class="logo-text">MatchMyPet</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="../../about.html">Inicio</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="reportar.html">Reportar</a>
+        <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clinicas</a>
+        <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../login/login.html" class="btn-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+        <a href="../henrique-souza-telas/userPerfil.html" class="btn-perfil">
+          <span>&#128100;</span> Perfil
+        </a>
+      </div>
+      <button class="botao-menu-ronan" type="button" onclick="alternarMenuRonan()" aria-label="Abrir menu">&#9776;</button>
+    </div>
+    <nav class="nav-mobile-ronan" id="menuMobileRonan">
+      <a href="../../about.html">Inicio</a>
+      <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+      <a href="reportar.html">Reportar</a>
+      <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+      <a href="../pedro-aguiar/index.html">Produtos</a>
+      <a href="../clinicas-parceiros/clinicas.html">Clinicas</a>
+      <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+      <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+      <a href="contato.html">Contato</a>
+      <div class="acoes-menu-mobile-ronan">
+        <a href="../login/login.html" class="btn-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+        <a href="../henrique-souza-telas/userPerfil.html" class="btn-perfil">
+          <span>&#128100;</span> Perfil
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-icon">&#128172;</span>
+      <h1>Entre em Contato</h1>
+      <p>Estamos aqui para ajudar. Envie sua mensagem!</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="form-section">
+      <h2>Envie sua Mensagem</h2>
+      <form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Nome Completo <span class="required">*</span></label>
+            <input type="text" placeholder="Seu nome">
+          </div>
+          <div class="form-group">
+            <label for="campo-email">E-mail <span class="required">*</span></label>
+            <input type="email" id="campo-email" name="email" placeholder="seu@email.com" maxlength="254" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="campo-telefone">Telefone</label>
+            <input type="tel" id="campo-telefone" name="telefone" placeholder="(11) 98765-4321" maxlength="15" inputmode="numeric" autocomplete="tel">
+          </div>
+          <div class="form-group">
+            <label>Assunto <span class="required">*</span></label>
+            <select>
+              <option>Selecione um assunto</option>
+              <option>Duvidas sobre adocao</option>
+              <option>Suporte tecnico</option>
+              <option>Parcerias</option>
+              <option>Outro</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>Mensagem <span class="required">*</span></label>
+          <textarea placeholder="Escreva sua mensagem aqui..."></textarea>
+        </div>
+        <button type="submit" class="btn-submit">
+          <span>&#9993;</span> Enviar Mensagem
+        </button>
+      </form>
+    </section>
+
+    <aside>
+      <section class="info-card">
+        <h3>Informacoes de Contato</h3>
+        <div class="info-item">
+          <div class="info-icon email">&#9993;</div>
+          <div class="info-text">
+            <strong>E-mail</strong>
+            <p>contato@adotapet.com.br</p>
+            <p>suporte@adotapet.com.br</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon phone">&#9742;</div>
+          <div class="info-text">
+            <strong>Telefone</strong>
+            <p>(11) 3000-0000</p>
+            <p>WhatsApp: (11) 99999-9999</p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon location">&#128205;</div>
+          <div class="info-text">
+            <strong>Endereco</strong>
+            <p>Rua dos Animais, 123</p>
+            <p>Sao Paulo, SP - CEP 01234-567</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="horarios-card">
+        <h3>Horario de Atendimento</h3>
+        <div class="horario-item">
+          <span>Segunda a Sexta:</span>
+          <strong>9h - 18h</strong>
+        </div>
+        <div class="horario-item">
+          <span>Sabado:</span>
+          <strong>9h - 14h</strong>
+        </div>
+        <div class="horario-item">
+          <span>Domingo:</span>
+          <strong class="fechado">Fechado</strong>
+        </div>
+      </section>
+
+      <section class="faq-card">
+        <div class="faq-icon">?</div>
+        <h3>Perguntas Frequentes</h3>
+        <p>Antes de entrar em contato, confira se sua duvida ja foi respondida em nossa secao de FAQ.</p>
+        <a href="#">Ver Perguntas Frequentes &#8594;</a>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">&#10084;</span>
+          <span class="logo-text">MatchMyPet</span>
+        </div>
+        <p>Deslize - Conecte - Adote. Encontre seu pet perfeito atraves de matches inteligentes.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navegacao</h4>
+        <a href="../../about.html">Inicio</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="reportar.html">Reportar</a>
+        <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+      </div>
+      <div class="footer-nav">
+        <h4>Recursos</h4>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clinicas</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="footer-social">
+        <h4>Redes Sociais</h4>
+        <div class="social-links">
+          <a href="#">f</a>
+          <a href="#">in</a>
+          <a href="#">tw</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2026 AdotaPet. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/auth-header.js"></script>
+  <script src="contato.js"></script>
+</body>
+</html>

@@ -1,0 +1,725 @@
+:root {
+  --fundo: #fdf4ff;
+  --branco: #ffffff;
+  --texto: #111827;
+  --texto-suave: #6b7280;
+  --borda: #e5e7eb;
+  --rosa: #ec4899;
+  --rosa-escuro: #db2777;
+  --roxo: #9333ea;
+  --roxo-escuro: #7e22ce;
+  --verde: #22c55e;
+  --amarelo: #facc15;
+  --arredondamento: 0.75rem;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; }
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ── Cabeçalho ── */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--branco);
+  border-bottom: 1px solid var(--borda);
+}
+
+.cabecalho-interno {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logotipo { display: flex; align-items: center; gap: 0.5rem; }
+.logotipo-icone { font-size: 1.5rem; color: var(--rosa); }
+
+.logotipo-texto {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--rosa), var(--roxo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navegacao-desktop { display: none; gap: 1.5rem; }
+.navegacao-desktop a { font-size: 0.875rem; color: #374151; transition: color 0.2s; }
+.navegacao-desktop a:hover,
+.navegacao-desktop a.ativo { color: var(--rosa); font-weight: 600; }
+
+.acoes-cabecalho { display: none; align-items: center; gap: 1rem; }
+.botao-entrar { font-size: 0.875rem; color: #374151; }
+
+.botao-perfil {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, var(--rosa), var(--roxo));
+  color: #fff;
+  border-radius: var(--arredondamento);
+  font-size: 0.875rem;
+}
+
+.botao-menu { background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #374151; }
+
+.navegacao-mobile {
+  display: none;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--borda);
+}
+
+.navegacao-mobile.aberto { display: flex; }
+.navegacao-mobile a { padding: 0.5rem 0; font-size: 0.875rem; color: #374151; }
+
+.acoes-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--borda);
+}
+
+.botao-perfil-mobile {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, var(--rosa), var(--roxo));
+  color: #fff !important;
+  border-radius: var(--arredondamento);
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .navegacao-desktop { display: flex; }
+  .acoes-cabecalho { display: flex; }
+  .botao-menu { display: none; }
+}
+
+/* ── Topo ── */
+.topo-pagina {
+  background: linear-gradient(to right, var(--roxo), var(--rosa), var(--rosa));
+  color: #fff;
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.topo-icone { font-size: 4rem; display: block; margin-bottom: 1rem; }
+
+.topo-conteudo h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.topo-conteudo p {
+  font-size: 1.125rem;
+  color: #fce7f3;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+/* ── Página ── */
+.pagina { padding: 3rem 0; }
+
+/* ── Destaque benefício ── */
+.destaque-beneficio {
+  background: linear-gradient(135deg, #fef3c7, #fde68a);
+  border: 2px solid #f59e0b;
+  border-radius: var(--arredondamento);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.destaque-beneficio-icone { font-size: 2.5rem; flex-shrink: 0; }
+
+.destaque-beneficio h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 0.25rem;
+}
+
+.destaque-beneficio p {
+  font-size: 0.9375rem;
+  color: #78350f;
+}
+
+/* ── Filtros ── */
+.barra-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.contador-itens {
+  font-size: 0.9375rem;
+  color: var(--texto-suave);
+}
+
+.filtro-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--borda);
+  border-radius: var(--arredondamento);
+  background: var(--branco);
+  font-size: 0.875rem;
+  color: var(--texto);
+  cursor: pointer;
+}
+
+/* ── Grade de clínicas ── */
+.grade-clinicas {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grade-clinicas { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grade-clinicas { grid-template-columns: repeat(3, 1fr); }
+}
+
+.cartao-clinica {
+  background: var(--branco);
+  border-radius: var(--arredondamento);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cartao-clinica:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(147, 51, 234, 0.15);
+}
+
+.clinica-imagem {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.clinica-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-parceiro {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: linear-gradient(to right, var(--roxo), var(--rosa));
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.badge-desconto {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: var(--verde);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.clinica-corpo { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+
+.clinica-cabecalho {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.clinica-cabecalho h3 { font-size: 1.125rem; font-weight: 700; }
+
+.clinica-avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--amarelo);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.clinica-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+}
+
+.clinica-info span:first-child { flex-shrink: 0; }
+
+.clinica-especialidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.tag-especialidade {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.625rem;
+  background: #f3e8ff;
+  color: var(--roxo);
+  border-radius: 999px;
+  font-weight: 500;
+}
+
+.clinica-acoes {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.btn-ligar,
+.btn-maps {
+  flex: 1;
+  padding: 0.625rem;
+  border-radius: var(--arredondamento);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: center;
+  transition: opacity 0.2s;
+}
+
+.btn-ligar {
+  background: linear-gradient(to right, var(--rosa), var(--roxo));
+  color: #fff;
+}
+
+.btn-maps {
+  background: #f3f4f6;
+  color: var(--texto);
+  border: 1px solid var(--borda);
+}
+
+.btn-ligar:hover,
+.btn-maps:hover { opacity: 0.85; }
+
+/* ── Parcerias ── */
+.secao-beneficios {
+  margin-bottom: 3rem;
+}
+
+.titulo-secao {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.titulo-icone {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, var(--roxo), var(--rosa));
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.titulo-secao h2 { font-size: 1.875rem; font-weight: 700; }
+
+.grade-beneficios {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .grade-beneficios { grid-template-columns: repeat(3, 1fr); }
+}
+
+.cartao-beneficio {
+  background: var(--branco);
+  border-radius: var(--arredondamento);
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  text-align: center;
+}
+
+.cartao-beneficio .icone { font-size: 2.5rem; margin-bottom: 0.75rem; }
+
+.cartao-beneficio h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.cartao-beneficio p {
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+}
+
+.grade-parceiros {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grade-parceiros { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grade-parceiros { grid-template-columns: repeat(3, 1fr); }
+}
+
+.cartao-parceiro {
+  background: var(--branco);
+  border-radius: var(--arredondamento);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.cartao-parceiro:hover { transform: translateY(-4px); }
+
+.parceiro-imagem {
+  height: 160px;
+  overflow: hidden;
+  position: relative;
+}
+
+.parceiro-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.badge-tipo {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.parceiro-corpo { padding: 1.25rem; flex: 1; display: flex; flex-direction: column; gap: 0.5rem; }
+
+.parceiro-corpo h3 { font-size: 1.125rem; font-weight: 700; }
+
+.parceiro-corpo p {
+  font-size: 0.875rem;
+  color: var(--texto-suave);
+  flex: 1;
+}
+
+.parceiro-desde {
+  font-size: 0.75rem;
+  color: var(--rosa);
+  font-weight: 600;
+}
+
+.btn-visitar {
+  display: block;
+  margin-top: 0.75rem;
+  padding: 0.625rem;
+  background: #f3f4f6;
+  border: 1px solid var(--borda);
+  border-radius: var(--arredondamento);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.btn-visitar:hover { background: #e5e7eb; }
+
+/* ── Chamada para ação ── */
+.chamada-acao {
+  background: linear-gradient(135deg, var(--roxo), var(--rosa));
+  border-radius: var(--arredondamento);
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 3rem;
+}
+
+.chamada-icone { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+.chamada-acao h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.chamada-acao p {
+  font-size: 1.0625rem;
+  color: #ede9fe;
+  margin-bottom: 1.5rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botao-branco {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background: #fff;
+  color: var(--roxo);
+  border-radius: var(--arredondamento);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.botao-branco:hover { opacity: 0.9; }
+
+.mensagem-erro,
+.mensagem-vazia {
+  text-align: center;
+  padding: 2rem;
+  color: var(--texto-suave);
+}
+
+.mensagem-erro { color: #dc2626; }
+
+/* ── Rodapé ── */
+.rodape { background: #111827; color: #d1d5db; padding: 3rem 0 0; }
+
+.grade-rodape {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grade-rodape { grid-template-columns: 2fr 1fr 1fr 1fr; }
+}
+
+.logotipo-rodape {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+.marca-rodape p { font-size: 0.875rem; }
+
+.coluna-rodape h3 { color: #fff; font-weight: 600; margin-bottom: 1rem; font-size: 1rem; }
+
+.coluna-rodape ul { list-style: none; }
+.coluna-rodape li { margin-bottom: 0.5rem; }
+.coluna-rodape a { font-size: 0.875rem; color: #9ca3af; transition: color 0.2s; }
+.coluna-rodape a:hover { color: #fff; }
+
+.fundo-rodape {
+  border-top: 1px solid #374151;
+  padding: 1.5rem 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* ── Dark mode ── */
+html.dark-mode .topo-pagina {
+  background: linear-gradient(135deg, #2a1a3d 0%, #1f1225 50%, #1a1028 100%);
+}
+
+html.dark-mode .topo-conteudo h1 {
+  color: #f9fafb;
+}
+
+html.dark-mode .topo-conteudo p {
+  color: #d8b4fe;
+}
+
+html.dark-mode .destaque-beneficio {
+  background: linear-gradient(135deg, #422006 0%, #292524 100%);
+  border-color: #b45309;
+}
+
+html.dark-mode .destaque-beneficio h2 {
+  color: #fcd34d !important;
+}
+
+html.dark-mode .destaque-beneficio p {
+  color: #fde68a !important;
+}
+
+html.dark-mode .contador-itens {
+  color: #d1d5db !important;
+}
+
+html.dark-mode .filtro-select {
+  background-color: #252530;
+  color: #ffffff;
+  border-color: var(--borda);
+}
+
+html.dark-mode .cartao-clinica,
+html.dark-mode .cartao-beneficio,
+html.dark-mode .cartao-parceiro {
+  background: var(--branco);
+  border: 1px solid var(--borda);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode .cartao-clinica:hover,
+html.dark-mode .cartao-parceiro:hover {
+  box-shadow: 0 8px 24px rgba(147, 51, 234, 0.25);
+}
+
+html.dark-mode .clinica-cabecalho h3,
+html.dark-mode .parceiro-corpo h3,
+html.dark-mode .cartao-beneficio h3,
+html.dark-mode .titulo-secao h2 {
+  color: #f9fafb !important;
+}
+
+html.dark-mode .clinica-info {
+  color: #d1d5db !important;
+}
+
+html.dark-mode .clinica-info span:first-child {
+  color: #ffffff !important;
+}
+
+html.dark-mode .clinica-avaliacao {
+  color: #facc15 !important;
+}
+
+html.dark-mode .tag-especialidade {
+  background: rgba(147, 51, 234, 0.2);
+  color: #e9d5ff !important;
+  border: 1px solid rgba(147, 51, 234, 0.35);
+}
+
+html.dark-mode .btn-maps,
+html.dark-mode .btn-visitar {
+  background: #252530;
+  color: #ffffff !important;
+  border-color: var(--borda);
+}
+
+html.dark-mode .btn-maps:hover,
+html.dark-mode .btn-visitar:hover {
+  background: #2d2d3a;
+}
+
+html.dark-mode .btn-ligar {
+  color: #ffffff !important;
+}
+
+html.dark-mode .cartao-beneficio {
+  border: 1px solid var(--borda);
+}
+
+html.dark-mode .cartao-beneficio p,
+html.dark-mode .parceiro-corpo p {
+  color: #d1d5db !important;
+}
+
+html.dark-mode .parceiro-imagem .badge-tipo {
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff !important;
+}
+
+html.dark-mode .parceiro-desde {
+  color: #f472b6 !important;
+}
+
+html.dark-mode .chamada-acao {
+  background: linear-gradient(135deg, #3b1a5c 0%, #2a1a3d 50%, #1f1225 100%);
+  border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+html.dark-mode .chamada-acao h2 {
+  color: #f9fafb !important;
+}
+
+html.dark-mode .chamada-acao p {
+  color: #d8b4fe !important;
+}
+
+html.dark-mode .botao-branco {
+  background: #ffffff;
+  color: var(--roxo) !important;
+}
+
+html.dark-mode .botao-branco:hover {
+  background: #f3e8ff;
+}
+
+html.dark-mode .mensagem-vazia {
+  color: #d1d5db !important;
+}
+
+html.dark-mode .mensagem-erro {
+  color: #fca5a5 !important;
+}
+
+html.dark-mode .navegacao-desktop a.ativo,
+html.dark-mode .navegacao-mobile a.ativo {
+  color: var(--rosa) !important;
+}
+
+html.dark-mode .coluna-rodape a {
+  color: #9ca3af !important;
+}
+
+html.dark-mode .coluna-rodape a:hover {
+  color: #ffffff !important;
+}
+
+html.dark-mode .fundo-rodape {
+  color: #6b7280 !important;
+}

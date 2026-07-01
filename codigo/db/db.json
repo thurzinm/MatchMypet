@@ -1,0 +1,539 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "login": "admin",
+      "senha": "123",
+      "nome": "Administrador do Sistema",
+      "email": "admin@abc.com",
+      "bio": "teste",
+      "telefone": "",
+      "tipo": "Adotador"
+    },
+    {
+      "id": 2,
+      "login": "user",
+      "senha": "123",
+      "nome": "Usuario Comum",
+      "email": "user@abc.com"
+    },
+    {
+      "id": 3,
+      "login": "rommel",
+      "senha": "123",
+      "nome": "Rommel",
+      "email": "rommel@gmail.com"
+    }
+  ],
+  "animais": [
+    {
+      "id": 1,
+      "nome": "Rex",
+      "idade": "2 anos",
+      "cidade": "Belo Horizonte",
+      "imagem": "https://placedog.net/500",
+      "descricao": "Cachorro brincalhão"
+    },
+    {
+      "id": 2,
+      "nome": "Mia",
+      "idade": "1 ano",
+      "cidade": "São Paulo",
+      "imagem": "https://cdn2.thecatapi.com/images/MTY3ODIyMQ.jpg",
+      "descricao": "Gata carinhosa"
+    }
+  ],
+  "settings": [
+    {
+      "id": 1,
+      "darkMode": false,
+      "language": "pt"
+    }
+  ],
+  "mensagens": [
+    {
+      "id": 1,
+      "remetenteId": 3,
+      "destinatarioId": 1,
+      "conteudo": "Olá, tudo bem?",
+      "data": "2026-06-02T08:30:00Z"
+    }
+  ],
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Shampoo Hipoalergênico",
+      "categoria": "Higiene",
+      "preco": 28.5,
+      "avaliacao": 4.5,
+      "imagem": "https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?w=400&h=300&fit=crop",
+      "descricao": "Shampoo suave para peles sensíveis, ideal para cães e gatos.",
+      "descricaoDetalhada": "Fórmula dermatologicamente testada, sem parabenos e com pH balanceado para a pele dos pets. Limpa com suavidade, reduz coceira e mantém o pelo macio e com brilho. Indicado para banhos frequentes e para animais com tendência a alergias.",
+      "especificacoes": [
+        "Volume: 500 ml",
+        "Sem corantes artificiais",
+        "Aroma leve e neutro",
+        "Uso em cães e gatos adultos"
+      ]
+    },
+    {
+      "id": 2,
+      "nome": "Comedouro Automático",
+      "categoria": "Alimentação",
+      "preco": 159.9,
+      "avaliacao": 4.8,
+      "imagem": "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=400&h=300&fit=crop",
+      "descricao": "Comedouro automático programável com capacidade para 2kg de ração.",
+      "descricaoDetalhada": "Programe até 4 refeições por dia com porções ajustáveis. Ideal para rotinas de trabalho ou viagens curtas. Tampa hermética ajuda a manter a ração fresca e longe de insetos.",
+      "especificacoes": [
+        "Capacidade: até 2 kg de ração seca",
+        "Alimentação a pilhas (não inclusas)",
+        "Bandeja removível para limpeza",
+        "Display com relógio e timer"
+      ]
+    },
+    {
+      "id": 3,
+      "nome": "Casinha de Madeira",
+      "categoria": "Moradia",
+      "preco": 299,
+      "avaliacao": 4.9,
+      "imagem": "https://images.unsplash.com/photo-1567752881298-894bb81f9379?w=400&h=300&fit=crop",
+      "descricao": "Casinha de madeira resistente, ideal para cães de médio porte.",
+      "descricaoDetalhada": "Estrutura em madeira tratada com telhado inclinado para escoamento da chuva. Piso elevado reduz umidade e frio. Pintura atóxica e acabamento que combina com quintal ou área externa coberta.",
+      "especificacoes": [
+        "Porte indicado: médio (até ~20 kg)",
+        "Pintura à base de água",
+        "Montagem com parafusos inclusos",
+        "Uso preferencial em área coberta ou sombreada"
+      ]
+    },
+    {
+      "id": 4,
+      "nome": "Petiscos Naturais",
+      "categoria": "Alimentação",
+      "preco": 22.9,
+      "avaliacao": 4.7,
+      "imagem": "https://images.unsplash.com/photo-1568640347023-a616a30bc3bd?w=400&h=300&fit=crop",
+      "descricao": "Petiscos 100% naturais, sem conservantes, para cães de todas as idades.",
+      "descricaoDetalhada": "Feitos com ingredientes simples e fonte proteica real. Ótimos para treino positivo, recompensa após passeios ou enriquecimento em brinquedos recheáveis. Embalagem com fecho para manter crocância.",
+      "especificacoes": [
+        "Peso: 150 g",
+        "Sem corantes nem conservantes artificiais",
+        "Textura macia para quebrar em pedaços menores",
+        "Armazenar em local fresco e seco"
+      ]
+    },
+    {
+      "id": 5,
+      "nome": "Coleira Ajustável",
+      "categoria": "Acessórios",
+      "preco": 45,
+      "avaliacao": 4.3,
+      "imagem": "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?w=400&h=300&fit=crop",
+      "descricao": "Coleira ajustável com fecho seguro e material confortável.",
+      "descricaoDetalhada": "Nylon resistente com costuras reforçadas e fivela de encaixe rápido. Argola em metal para guia ou identificação. Ajuste fino no comprimento para melhor encaixe sem apertar demais.",
+      "especificacoes": [
+        "Ajuste de circunferência do pescoço conforme tamanho escolhido",
+        "Argola para guia resistente",
+        "Material leve e fácil de secar",
+        "Lavar com água e sabão neutro"
+      ]
+    },
+    {
+      "id": 6,
+      "nome": "Brinquedo de Corda",
+      "categoria": "Brinquedos",
+      "preco": 19.9,
+      "avaliacao": 4.6,
+      "imagem": "https://images.unsplash.com/photo-1535294435445-d7249b8f2571?w=400&h=300&fit=crop",
+      "descricao": "Brinquedo de corda resistente para brincadeiras de puxar.",
+      "descricaoDetalhada": "Corda trançada com fibras resistentes e nós nas extremidades para pegada segura. Estimula o instinto de morder e fortalece o vínculo tutor–pet em brincadeiras supervisionadas.",
+      "especificacoes": [
+        "Comprimento aproximado: 35 cm",
+        "Supervisão recomendada durante o uso",
+        "Substituir se houver fios soltos ou desgaste",
+        "Indicado para cães de pequeno a médio porte"
+      ]
+    },
+    {
+      "id": 7,
+      "nome": "Cama Ortopédica",
+      "categoria": "Conforto",
+      "preco": 189.9,
+      "avaliacao": 4.8,
+      "imagem": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?w=400&h=300&fit=crop",
+      "descricao": "Cama ortopédica com espuma de memória para cães idosos ou com problemas articulares.",
+      "descricaoDetalhada": "Base estável com espuma viscoelástica que distribui o peso e alivia pontos de pressão. Capa com zíper removível para lavagem à máquina. Bordas levemente elevadas funcionam como apoio para o pescoço.",
+      "especificacoes": [
+        "Espuma de memória de alta densidade",
+        "Capa externa removível e lavável",
+        "Fundo antiderrapante",
+        "Escolha o tamanho conforme o comprimento do seu cão deitado"
+      ]
+    },
+    {
+      "id": 8,
+      "nome": "Kit Higiene Dental",
+      "categoria": "Higiene",
+      "preco": 34.9,
+      "avaliacao": 4.4,
+      "imagem": "https://images.unsplash.com/photo-1583337130417-13104dec14a7?w=400&h=300&fit=crop",
+      "descricao": "Kit com escova e pasta dental especial para cães.",
+      "descricaoDetalhada": "Inclui escova com cerdas macias e dedeira opcional para primeiros cuidados. Pasta com sabor agradável para pets, sem flúor, pensada para uso regular e redução de tártaro com orientação veterinária.",
+      "especificacoes": [
+        "1 escova + 1 pasta dental para cães",
+        "Sabor aprovado na rotina diária",
+        "Introduzir gradualmente para evitar estresse",
+        "Consulte o veterinário sobre frequência ideal"
+      ]
+    }
+  ],
+  "pedidos": [],
+  "clinicas": [
+    {
+      "id": 1,
+      "nome": "PetVida Clínica Veterinária",
+      "parceiroOficial": true,
+      "endereco": "Rua das Flores, 123 - Savassi, Belo Horizonte - MG",
+      "telefone": "(31) 3333-4444",
+      "horario": "Seg-Sex 8h-18h | Sáb 8h-12h",
+      "avaliacao": 4.9,
+      "especialidades": [
+        "Consultas",
+        "Cirurgia",
+        "Vacinação"
+      ],
+      "descontoAdotados": 20,
+      "imagem": "https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 2,
+      "nome": "Amigo Fiel Veterinária",
+      "parceiroOficial": true,
+      "endereco": "Av. Afonso Pena, 1500 - Centro, Belo Horizonte - MG",
+      "telefone": "(31) 3222-5566",
+      "horario": "Seg-Sex 7h-19h | Sáb 8h-14h",
+      "avaliacao": 4.7,
+      "especialidades": [
+        "Consultas",
+        "Vacinação",
+        "Exames"
+      ],
+      "descontoAdotados": 20,
+      "imagem": "https://images.unsplash.com/photo-1576201836106-db1758fd1c76?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 3,
+      "nome": "Centro Veterinário Patas & Cia",
+      "parceiroOficial": true,
+      "endereco": "Rua da Bahia, 890 - Lourdes, Belo Horizonte - MG",
+      "telefone": "(31) 3456-7890",
+      "horario": "24 horas",
+      "avaliacao": 4.8,
+      "especialidades": [
+        "Emergência",
+        "Cirurgia",
+        "Consultas"
+      ],
+      "descontoAdotados": 20,
+      "imagem": "https://images.unsplash.com/photo-1530041539828-9a24d4d0b870?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 4,
+      "nome": "Clínica VetBem",
+      "parceiroOficial": true,
+      "endereco": "Rua Contagem, 456 - Santa Efigênia, Belo Horizonte - MG",
+      "telefone": "(31) 3111-2233",
+      "horario": "Seg-Sex 9h-17h",
+      "avaliacao": 4.6,
+      "especialidades": [
+        "Consultas",
+        "Vacinação"
+      ],
+      "descontoAdotados": 20,
+      "imagem": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=400&h=300&fit=crop"
+    },
+    {
+      "id": 5,
+      "nome": "Hospital Veterinário São Francisco",
+      "parceiroOficial": true,
+      "endereco": "Av. do Contorno, 6200 - Santo Agostinho, Belo Horizonte - MG",
+      "telefone": "(31) 3555-6677",
+      "horario": "Seg-Dom 7h-22h",
+      "avaliacao": 4.9,
+      "especialidades": [
+        "Cirurgia",
+        "Emergência",
+        "Exames",
+        "Consultas"
+      ],
+      "descontoAdotados": 20,
+      "imagem": "https://images.unsplash.com/photo-1583337130417-13104dec14a7?w=400&h=300&fit=crop"
+    }
+  ],
+  "parceiros": [
+    {
+      "id": 1,
+      "nome": "ONG Amor em Patas",
+      "tipo": "ONG",
+      "descricao": "Organização sem fins lucrativos dedicada ao resgate, tratamento e encaminhamento de animais abandonados em Belo Horizonte.",
+      "imagem": "https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=400&h=300&fit=crop",
+      "site": "https://example.com/amor-em-patas",
+      "parceiroDesde": "2023"
+    },
+    {
+      "id": 2,
+      "nome": "PetFood Brasil",
+      "tipo": "Marca",
+      "descricao": "Marca de alimentos premium para pets que doa 5% das vendas realizadas pela loja MatchMyPet para ONGs parceiras.",
+      "imagem": "https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400&h=300&fit=crop",
+      "site": "https://example.com/petfood",
+      "parceiroDesde": "2024"
+    },
+    {
+      "id": 3,
+      "nome": "Instituto Bem-Estar Animal",
+      "tipo": "Instituição",
+      "descricao": "Instituto que promove campanhas de castração, vacinação e educação sobre posse responsável de animais.",
+      "imagem": "https://images.unsplash.com/photo-1601758124510-52d02ddb7cbd?w=400&h=300&fit=crop",
+      "site": "https://example.com/instituto-bem-estar",
+      "parceiroDesde": "2022"
+    },
+    {
+      "id": 4,
+      "nome": "Loja PetCenter",
+      "tipo": "Empresa",
+      "descricao": "Rede de pet shops que oferece kits de boas-vindas gratuitos para tutores que adotam pela plataforma.",
+      "imagem": "https://images.unsplash.com/photo-1599839575945-a9e5af0c3fa5?w=400&h=300&fit=crop",
+      "site": "https://example.com/petcenter",
+      "parceiroDesde": "2024"
+    },
+    {
+      "id": 5,
+      "nome": "Projeto Segunda Chance",
+      "tipo": "ONG",
+      "descricao": "Projeto voluntário que acolhe animais em situação de risco e os prepara para adoção com carinho e cuidados veterinários.",
+      "imagem": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop",
+      "site": "https://example.com/segunda-chance",
+      "parceiroDesde": "2023"
+    },
+    {
+      "id": 6,
+      "nome": "VetLine Laboratório",
+      "tipo": "Empresa",
+      "descricao": "Laboratório veterinário que oferece exames com preço especial para animais resgatados e adotados pela plataforma.",
+      "imagem": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop",
+      "site": "https://example.com/vetline",
+      "parceiroDesde": "2025"
+    }
+  ],
+  "matchContatos": [
+    {
+      "usuarioId": 2,
+      "petId": 1,
+      "responsavel": "ONG Patinhas do Bem",
+      "petNome": "Max",
+      "tipo": "Cachorro",
+      "avatar": "https://placedog.net/52/52?id=1",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Oi!",
+          "hora": "20:00"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:00:00.000Z",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "usuarioId": 1,
+      "petId": 1,
+      "responsavel": "ONG Patinhas do Bem",
+      "petNome": "Max",
+      "tipo": "Cachorro",
+      "avatar": "https://placedog.net/900/675?id=1",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Oi! A equipe da Patinhas do Bem adorou seu interesse no Max. Posso te explicar o processo de adoção e marcar uma visita?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:38.389Z"
+    },
+    {
+      "id": 3,
+      "usuarioId": 1,
+      "petId": 2,
+      "responsavel": "Protetora Ana Paula",
+      "petNome": "Luna",
+      "tipo": "Gato",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/960px-Cat_November_2010-1a.jpg",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Bom dia! Aqui é a Ana Paula. A Luna é bem calminha e adora colo — quer que eu te envie o histórico veterinário dela?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:39.584Z"
+    },
+    {
+      "id": 4,
+      "usuarioId": 1,
+      "petId": 3,
+      "responsavel": "Lar Temporário Cãopanheiro",
+      "petNome": "Thor",
+      "tipo": "Cachorro",
+      "avatar": "https://placedog.net/900/675?id=3",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Opa! Thor está pulando de alegria por aqui. Quer vir conhecer esse filhote cheio de energia pessoalmente?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:40.454Z"
+    },
+    {
+      "id": 5,
+      "usuarioId": 1,
+      "petId": 4,
+      "responsavel": "Abrigo Esperança Animal",
+      "petNome": "Mel",
+      "tipo": "Cachorro",
+      "avatar": "https://placedog.net/900/675?id=4",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Olá! Somos do Abrigo Esperança Animal. A Mel já tem treinamento básico e se dá super bem com outros pets. Tem interesse em agendar um encontro?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:41.200Z"
+    },
+    {
+      "id": 6,
+      "usuarioId": 1,
+      "petId": 5,
+      "responsavel": "Clínica Vet Amigo Fiel",
+      "petNome": "Bob",
+      "tipo": "Gato",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Persian_6d.jpg/960px-Persian_6d.jpg",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Boa tarde! Aqui é a equipe da Clínica Amigo Fiel. O Bob é tranquilo e ideal para apartamento. Posso tirar suas dúvidas sobre os cuidados com a pelagem dele?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:44.740Z"
+    },
+    {
+      "id": 7,
+      "usuarioId": 1,
+      "petId": 6,
+      "responsavel": "Protetor Carlos Mendes",
+      "petNome": "Nina",
+      "tipo": "Cachorro",
+      "avatar": "https://placedog.net/900/675?id=6",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "E aí! Sou o Carlos, protetor da Nina. Ela veio das ruas e hoje é uma cachorra equilibrada e muito leal. Quer saber como está a rotina dela?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:47.434Z"
+    },
+    {
+      "id": 8,
+      "usuarioId": 1,
+      "petId": 7,
+      "responsavel": "Lar Temporário Gatos & Cia",
+      "petNome": "Pipoca",
+      "tipo": "Gato",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Kitten_%281%29.jpg/960px-Kitten_%281%29.jpg",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Oi! O Pipoca acabou de derrubar um pote de ração aqui — filhote curioso demais. Posso te contar sobre a rotina e os cuidados com gatos pequenos?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:48.787Z"
+    },
+    {
+      "id": 9,
+      "usuarioId": 1,
+      "petId": 8,
+      "responsavel": "ONG Cães de BH",
+      "petNome": "Zeus",
+      "tipo": "Cachorro",
+      "avatar": "https://placedog.net/900/675?id=8",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Olá! A ONG Cães de BH aqui. O Zeus é obediente e adora caminhadas longas. Você já teve experiência com cães de porte grande?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:49.751Z"
+    },
+    {
+      "id": 10,
+      "usuarioId": 1,
+      "petId": 9,
+      "responsavel": "Protetora Mariana Costa",
+      "petNome": "Mimi",
+      "tipo": "Gato",
+      "avatar": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Siam_lilacpoint.jpg/960px-Siam_lilacpoint.jpg",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Oi! Mariana falando. A Mimi é bem comunicativa e adora ficar colada no tutor. Quer ver um vídeo dela brincando?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:50.572Z"
+    },
+    {
+      "id": 11,
+      "usuarioId": 1,
+      "petId": 10,
+      "responsavel": "Abrigo Patinhas Urbanas",
+      "petNome": "Rex",
+      "tipo": "Cachorro",
+      "avatar": "https://placedog.net/900/675?id=10",
+      "mensagens": [
+        {
+          "tipo": "incoming",
+          "texto": "Hey! Aqui é o pessoal do Abrigo Patinhas Urbanas. O Rex é perfeito para apartamento e adora soneca no sofá. Topa conversar sobre a rotina dele?",
+          "hora": "20:36"
+        }
+      ],
+      "criadoEm": "2026-06-28T23:36:51.374Z"
+    }
+  ],
+  "matchFeedProgress": [
+    {
+      "usuarioId": 1,
+      "petsVistos": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "filtroAtivo": "todos",
+      "id": 1
+    }
+  ]
+}

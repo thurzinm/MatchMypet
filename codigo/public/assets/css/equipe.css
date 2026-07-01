@@ -1,0 +1,322 @@
+/* ── Hero ── */
+.equipe-hero {
+  position: relative;
+  padding: 5rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #fdf2f8 0%, #fae8ff 50%, #ede9fe 100%);
+  overflow: hidden;
+}
+
+.equipe-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1920&h=600&fit=crop") center / cover no-repeat;
+  opacity: 0.08;
+}
+
+.equipe-hero-conteudo {
+  position: relative;
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.equipe-hero-icone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(to right, var(--rosa), var(--roxo));
+  color: #fff;
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.equipe-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.equipe-hero p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .equipe-hero h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ── Intro ── */
+.equipe-intro {
+  padding: 4rem 0;
+}
+
+.equipe-intro-grid {
+  display: grid;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .equipe-intro-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.equipe-intro h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 1rem;
+}
+
+.equipe-intro p {
+  color: #6b7280;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.equipe-intro-destaques {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.equipe-destaque {
+  padding: 1.25rem;
+  background: #f9fafb;
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  text-align: center;
+}
+
+.equipe-destaque-numero {
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--rosa), var(--roxo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.equipe-destaque-texto {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+}
+
+/* ── Membros ── */
+.equipe-membros {
+  padding: 4rem 0 5rem;
+  background: #f9fafb;
+}
+
+.equipe-membros .cabecalho-secao {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.equipe-membros .cabecalho-secao h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem;
+}
+
+.equipe-membros .cabecalho-secao p {
+  font-size: 1.125rem;
+  color: #6b7280;
+  max-width: 36rem;
+  margin: 0 auto;
+}
+
+.grade-membros {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .grade-membros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grade-membros {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.membro-card {
+  background: #fff;
+  border-radius: 1rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.membro-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(236, 72, 153, 0.12);
+}
+
+.membro-avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.membro-card:nth-child(1) .membro-avatar { background: linear-gradient(135deg, #ec4899, #9333ea); }
+.membro-card:nth-child(2) .membro-avatar { background: linear-gradient(135deg, #f97316, #ec4899); }
+.membro-card:nth-child(3) .membro-avatar { background: linear-gradient(135deg, #8b5cf6, #6366f1); }
+.membro-card:nth-child(4) .membro-avatar { background: linear-gradient(135deg, #06b6d4, #3b82f6); }
+.membro-card:nth-child(5) .membro-avatar { background: linear-gradient(135deg, #10b981, #059669); }
+.membro-card:nth-child(6) .membro-avatar { background: linear-gradient(135deg, #f59e0b, #ef4444); }
+
+.membro-card h3 {
+  font-size: 1.0625rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.35rem;
+  line-height: 1.4;
+}
+
+.membro-cargo {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--rosa);
+  background: #fdf2f8;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.membro-descricao {
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.membro-modulos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.membro-modulo {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  background: #f3f4f6;
+  color: #374151;
+  border-radius: 0.375rem;
+}
+
+/* ── Projeto ── */
+.equipe-projeto {
+  padding: 4rem 0;
+}
+
+.equipe-projeto-card {
+  max-width: 48rem;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--rosa), var(--roxo));
+  color: #fff;
+}
+
+.equipe-projeto-card h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.equipe-projeto-card p {
+  opacity: 0.92;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.equipe-projeto-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.equipe-projeto-meta span {
+  font-size: 0.875rem;
+  padding: 0.4rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+}
+
+/* ── Nav ativo ── */
+.navegacao-desktop a.ativo,
+.navegacao-mobile a.ativo {
+  color: var(--rosa);
+  font-weight: 600;
+}
+
+/* ── Dark mode ── */
+html.dark-mode .equipe-hero {
+  background: linear-gradient(135deg, #1f1225 0%, #1a1527 50%, #151520 100%);
+}
+
+html.dark-mode .equipe-hero h1,
+html.dark-mode .equipe-intro h2,
+html.dark-mode .equipe-membros .cabecalho-secao h2,
+html.dark-mode .membro-card h3 {
+  color: #f9fafb;
+}
+
+html.dark-mode .equipe-hero p,
+html.dark-mode .equipe-intro p,
+html.dark-mode .equipe-membros .cabecalho-secao p,
+html.dark-mode .membro-descricao {
+  color: #9ca3af;
+}
+
+html.dark-mode .equipe-destaque {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+html.dark-mode .equipe-membros {
+  background: #111827;
+}
+
+html.dark-mode .membro-card {
+  background: #1f2937;
+  border-color: #374151;
+}
+
+html.dark-mode .membro-cargo {
+  background: rgba(236, 72, 153, 0.15);
+}
+
+html.dark-mode .membro-modulo {
+  background: #374151;
+  color: #d1d5db;
+}

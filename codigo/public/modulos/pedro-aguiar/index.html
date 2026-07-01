@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../assets/js/dark-mode.js"></script>
+  <title>Loja de Produtos | MatchMyPet</title>
+  <link rel="stylesheet" href="pedro-loja.css">
+  <link rel="stylesheet" href="../../assets/css/auth-header.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body>
+
+  <header class="cabecalho">
+    <div class="cabecalho-interno">
+      <a href="../../about.html" class="logotipo">
+        <span class="logotipo-icone">♥</span>
+        <span class="logotipo-texto">MatchMyPet</span>
+      </a>
+      <nav class="navegacao-desktop">
+        <a href="../../about.html">Início</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="../telas%20ronan/reportar.html">Reportar</a>
+        <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+        <a href="index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+        <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="../telas%20ronan/contato.html">Contato</a>
+      </nav>
+      <div class="acoes-cabecalho">
+        <a href="../login/login.html" class="botao-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+        <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil">👤 Perfil</a>
+      </div>
+      <button class="botao-menu" type="button" onclick="alternarMenu()">☰</button>
+    </div>
+    <nav class="navegacao-mobile" id="menuMobile">
+      <a href="../../about.html">Início</a>
+      <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+      <a href="../telas%20ronan/reportar.html">Reportar</a>
+      <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+      <a href="index.html">Produtos</a>
+      <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+      <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+      <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+      <a href="../telas%20ronan/contato.html">Contato</a>
+      <a href="../login/login.html" class="link-auth" data-login-href="../login/login.html">Entrar</a>
+      <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil" style="margin-top:0.5rem;text-align:center;">Perfil</a>
+    </nav>
+  </header>
+
+  <section class="loja-hero">
+    <h1>Loja de Produtos para Pets</h1>
+    <p>Tudo que seu pet precisa — e parte da venda ajuda ONGs parceiras</p>
+  </section>
+
+  <section class="filtro-container">
+    <span id="contador-produtos">Carregando...</span>
+    <select id="filtro-categoria">
+      <option value="todos">Todos os produtos</option>
+      <option value="Alimentação">Alimentação</option>
+      <option value="Higiene">Higiene</option>
+      <option value="Acessórios">Acessórios</option>
+      <option value="Brinquedos">Brinquedos</option>
+      <option value="Conforto">Conforto</option>
+      <option value="Moradia">Moradia</option>
+    </select>
+  </section>
+
+  <section class="categorias-container" id="categorias">
+    <div class="categoria-card" onclick="filtrarPorCategoria('Alimentação')">
+      <img src="https://images.unsplash.com/photo-1606566656606-426fb7c4359d?w=400&h=300&fit=crop" alt="Alimentação">
+      <span class="categoria-label">Alimentação</span>
+    </div>
+    <div class="categoria-card" onclick="filtrarPorCategoria('Acessórios')">
+      <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=400&h=300&fit=crop" alt="Acessórios">
+      <span class="categoria-label">Acessórios</span>
+    </div>
+    <div class="categoria-card" onclick="filtrarPorCategoria('Conforto')">
+      <img src="https://images.unsplash.com/photo-1541599544445-f78a5d73ae56?w=400&h=300&fit=crop" alt="Conforto">
+      <span class="categoria-label">Conforto</span>
+    </div>
+    <div class="categoria-card" onclick="filtrarPorCategoria('Brinquedos')">
+      <img src="https://images.unsplash.com/photo-1636254015239-58d25884f254?w=400&h=300&fit=crop" alt="Brinquedos">
+      <span class="categoria-label">Brinquedos</span>
+    </div>
+  </section>
+
+  <section class="produtos-grid" id="produtos-grid"></section>
+
+  <section class="ong-section">
+    <h2>Parte da venda é destinada a ONGs</h2>
+    <p>Ao comprar produtos em nossa loja, você também ajuda a financiar resgates e cuidados com animais abandonados.</p>
+    <a href="../../about.html" class="btn-saiba-mais">Saiba mais</a>
+  </section>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="grade-rodape">
+        <div class="marca-rodape">
+          <div class="logotipo-rodape">
+            <span class="logotipo-icone">♥</span>
+            <span>MatchMyPet</span>
+          </div>
+          <p>Deslize • Conecte • Adote. Encontre seu pet perfeito e apoie causas animais.</p>
+        </div>
+        <div class="coluna-rodape">
+          <h4>Navegação</h4>
+          <a href="../../about.html">Início</a>
+          <a href="index.html">Produtos</a>
+          <a href="../telas%20ronan/reportar.html">Reportar</a>
+          <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+        </div>
+        <div class="coluna-rodape">
+          <h4>Contato</h4>
+          <a href="../telas%20ronan/contato.html">Fale conosco</a>
+        </div>
+      </div>
+      <div class="fundo-rodape">
+        <p>&copy; 2026 MatchMyPet. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="carrinho-flutuante" id="btn-carrinho" type="button" onclick="abrirCarrinho()">
+    🛒
+    <span class="badge-carrinho" id="badge-carrinho" style="display:none;">0</span>
+  </button>
+
+  <div class="modal-carrinho" id="modal-carrinho">
+    <div class="modal-carrinho-conteudo">
+      <h2>Seu Carrinho</h2>
+      <div id="lista-carrinho"></div>
+      <div class="carrinho-total" id="carrinho-total" style="display:none;">
+        <span>Total:</span>
+        <span id="valor-total">R$ 0,00</span>
+      </div>
+      <button class="btn-finalizar-compra" type="button" onclick="finalizarCompra()">Finalizar compra</button>
+      <button class="btn-fechar-modal" type="button" onclick="fecharCarrinho()">Fechar</button>
+    </div>
+  </div>
+
+  <script>
+    function alternarMenu() {
+      document.getElementById('menuMobile').classList.toggle('aberto');
+    }
+  </script>
+  <script src="pedro-loja-api.js"></script>
+  <script src="carrinho.js"></script>
+  <script src="produtos.js"></script>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/auth-header.js"></script>
+</body>
+</html>

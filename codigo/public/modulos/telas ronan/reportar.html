@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="../../assets/js/dark-mode.js"></script>
+  <title>Reportar Animal - MatchMyPet</title>
+  <link rel="stylesheet" href="reportar.css">
+  <link rel="stylesheet" href="../../assets/css/auth-header.css">
+  <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+  <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="../../about.html" class="logo">
+        <span class="logo-icon">&#10084;</span>
+        <span class="logo-text">MatchMyPet</span>
+      </a>
+      <nav class="nav-desktop">
+        <a href="../../about.html">Inicio</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="reportar.html">Reportar</a>
+        <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clinicas</a>
+        <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+      <div class="header-actions">
+        <a href="../login/login.html" class="btn-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+        <a href="../henrique-souza-telas/userPerfil.html" class="btn-perfil">
+          <span>&#128100;</span> Perfil
+        </a>
+      </div>
+      <button class="botao-menu-ronan" type="button" onclick="alternarMenuRonan()" aria-label="Abrir menu">&#9776;</button>
+    </div>
+    <nav class="nav-mobile-ronan" id="menuMobileRonan">
+      <a href="../../about.html">Inicio</a>
+      <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+      <a href="reportar.html">Reportar</a>
+      <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+      <a href="../pedro-aguiar/index.html">Produtos</a>
+      <a href="../clinicas-parceiros/clinicas.html">Clinicas</a>
+      <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+      <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+      <a href="contato.html">Contato</a>
+      <div class="acoes-menu-mobile-ronan">
+        <a href="../login/login.html" class="btn-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+        <a href="../henrique-souza-telas/userPerfil.html" class="btn-perfil">
+          <span>&#128100;</span> Perfil
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="hero-icon">&#9888;</span>
+      <h1>Reportar Animal de Rua</h1>
+      <p>Ajude-nos a resgatar animais em situacao de vulnerabilidade</p>
+    </div>
+  </section>
+
+  <main>
+    <section class="form-section">
+      <h2>Fazer um Reporte</h2>
+      <form>
+        <div class="form-group">
+          <label>Localizacao <span class="required">*</span></label>
+          <div class="input-icon">
+            <span class="icon">&#128205;</span>
+            <input type="text" placeholder="Digite o endereco completo">
+          </div>
+          <span class="hint">Seja o mais especifico possivel para facilitar o resgate</span>
+        </div>
+        <div class="form-group">
+          <label>Descricao da Situacao <span class="required">*</span></label>
+          <textarea placeholder="Descreva o animal, condicao de saude aparente, comportamento, etc."></textarea>
+        </div>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Urgencia</label>
+            <select>
+              <option>Baixa - Animal parece saudavel</option>
+              <option>Media - Animal precisa de atencao</option>
+              <option>Alta - Animal em risco</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Seu contato (opcional)</label>
+            <input type="tel" placeholder="(11) 98765-4321">
+            <span class="hint">Para atualizacoes sobre o resgate</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Foto (opcional)</label>
+          <div class="upload-area">
+            <span class="upload-icon">&#128247;</span>
+            <p>Clique para adicionar uma foto</p>
+            <span class="upload-hint">Ajuda a identificar o animal</span>
+          </div>
+        </div>
+        <button type="submit" class="btn-submit">
+          <span>&#10148;</span> Enviar Reporte
+        </button>
+      </form>
+    </section>
+
+    <aside>
+      <section class="mapa-card">
+        <div class="mapa-header">
+          <span class="mapa-icon">&#128205;</span>
+          <h3>Mapa de Reportes</h3>
+        </div>
+        <div class="mapa-area">
+          <div class="pin pin-1">&#128205;</div>
+          <div class="pin pin-2">&#128205;</div>
+          <div class="pin pin-3">&#128205;</div>
+          <div class="pin pin-4">&#128205;</div>
+          <div class="mapa-label">
+            <span>Mapa interativo</span>
+            <strong>4 reportes ativos</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="reportes-card">
+        <h3>Reportes Recentes</h3>
+        <div class="reporte-item">
+          <div class="reporte-img">
+            <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=100&h=100&fit=crop" alt="Cachorro">
+          </div>
+          <div class="reporte-content">
+            <div class="reporte-top">
+              <span class="reporte-local">&#128205; Rua das Flores, 123 - Sao Paulo, SP</span>
+              <span class="badge aguardando">Aguardando</span>
+            </div>
+            <span class="reporte-meta">Reportado por Joao Silva - Ha 2 horas</span>
+            <p>Cachorro de porte medio, aparentemente abandonado ha alguns dias</p>
+          </div>
+        </div>
+        <div class="reporte-item">
+          <div class="reporte-img">
+            <img src="https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?w=100&h=100&fit=crop" alt="Filhote">
+          </div>
+          <div class="reporte-content">
+            <div class="reporte-top">
+              <span class="reporte-local">&#128205; Av. Paulista, 1000 - Sao Paulo, SP</span>
+              <span class="badge andamento">Em andamento</span>
+            </div>
+            <span class="reporte-meta">Reportado por Maria Costa - Ha 5 horas</span>
+            <p>Filhote encontrado proximo ao metro, precisa de resgate urgente</p>
+          </div>
+        </div>
+        <div class="reporte-item">
+          <div class="reporte-img">
+            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?w=100&h=100&fit=crop" alt="Cachorro coleira">
+          </div>
+          <div class="reporte-content">
+            <div class="reporte-top">
+              <span class="reporte-local">&#128205; Parque Ibirapuera - Sao Paulo, SP</span>
+              <span class="badge resolvido">Resolvido</span>
+            </div>
+            <span class="reporte-meta">Reportado por Pedro Santos - Ontem</span>
+            <p>Cachorro perdido com coleira, parece estar procurando o dono</p>
+          </div>
+        </div>
+        <div class="reporte-item">
+          <div class="reporte-img">
+            <img src="https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=100&h=100&fit=crop" alt="Grupo cachorros">
+          </div>
+          <div class="reporte-content">
+            <div class="reporte-top">
+              <span class="reporte-local">&#128205; Rua Augusta, 500 - Sao Paulo, SP</span>
+              <span class="badge aguardando">Aguardando</span>
+            </div>
+            <span class="reporte-meta">Reportado por Ana Paula - Ha 1 dia</span>
+            <p>Grupo de cachorros em situacao de rua, precisam de abrigo</p>
+          </div>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">&#10084;</span>
+          <span class="logo-text">MatchMyPet</span>
+        </div>
+        <p>Deslize - Conecte - Adote. Encontre seu pet perfeito atraves de matches inteligentes.</p>
+      </div>
+      <div class="footer-nav">
+        <h4>Navegacao</h4>
+        <a href="../../about.html">Inicio</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="reportar.html">Reportar</a>
+        <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+      </div>
+      <div class="footer-nav">
+        <h4>Recursos</h4>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clinicas</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="contato.html">Contato</a>
+      </div>
+      <div class="footer-social">
+        <h4>Redes Sociais</h4>
+        <div class="social-links">
+          <a href="#">f</a>
+          <a href="#">in</a>
+          <a href="#">tw</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>2026 AdotaPet. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+  <script src="../../assets/js/layout.js"></script>
+  <script src="../../assets/js/auth-header.js"></script>
+</body>
+</html>

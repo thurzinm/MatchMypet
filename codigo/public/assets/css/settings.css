@@ -1,0 +1,546 @@
+/* ── Configurações — MatchMyPet ── */
+
+:root {
+    --cfg-rosa: #ec4899;
+    --cfg-rosa-claro: #fce7f3;
+    --cfg-rosa-escuro: #db2777;
+    --cfg-roxo: #9333ea;
+    --cfg-fundo: #f9fafb;
+    --cfg-card: #ffffff;
+    --cfg-texto: #111827;
+    --cfg-texto-suave: #6b7280;
+    --cfg-borda: #e5e7eb;
+    --cfg-raio: 0.875rem;
+    --cfg-sucesso-bg: #dcfce7;
+    --cfg-sucesso-texto: #15803d;
+    --cfg-erro-bg: #fee2e2;
+    --cfg-erro-texto: #b91c1c;
+}
+
+/* ── Página ── */
+
+.pagina-config {
+    background: var(--cfg-fundo);
+    min-height: calc(100vh - 4rem);
+    padding: 1.5rem 1rem 6rem;
+}
+
+@media (min-width: 768px) {
+    .pagina-config {
+        padding: 2rem 1.5rem 3rem;
+    }
+}
+
+.config-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* ── Topo ── */
+
+.config-topo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.config-topo-esq {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.config-voltar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: var(--cfg-raio);
+    background: var(--cfg-card);
+    border: 1px solid var(--cfg-borda);
+    color: var(--cfg-texto-suave);
+    text-decoration: none;
+    flex-shrink: 0;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.config-voltar:hover {
+    border-color: var(--cfg-rosa);
+    color: var(--cfg-rosa);
+}
+
+.config-topo h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--cfg-texto);
+    letter-spacing: -0.02em;
+    margin: 0 0 0.15rem;
+}
+
+.config-subtitulo {
+    font-size: 0.875rem;
+    color: var(--cfg-texto-suave);
+    margin: 0;
+}
+
+.save-btn--topo {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .save-btn--topo {
+        display: inline-flex;
+        flex-shrink: 0;
+    }
+}
+
+/* ── Painel do perfil ── */
+
+.config-painel {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, var(--cfg-rosa) 0%, var(--cfg-roxo) 100%);
+    border-radius: var(--cfg-raio);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    color: #fff;
+}
+
+.profile-avatar {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.375rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.config-painel-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.config-painel-info strong {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.config-painel-info span {
+    font-size: 0.8125rem;
+    opacity: 0.85;
+}
+
+.config-badge {
+    flex-shrink: 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 2rem;
+}
+
+/* ── Abas de navegação ── */
+
+.config-abas {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1.25rem;
+    scrollbar-width: none;
+}
+
+.config-abas::-webkit-scrollbar {
+    display: none;
+}
+
+.config-aba {
+    flex-shrink: 0;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--cfg-texto-suave);
+    text-decoration: none;
+    background: var(--cfg-card);
+    border: 1px solid var(--cfg-borda);
+    transition: all 0.2s;
+}
+
+.config-aba:hover {
+    border-color: var(--cfg-rosa);
+    color: var(--cfg-rosa);
+}
+
+.config-aba.ativo {
+    background: linear-gradient(to right, var(--cfg-rosa), var(--cfg-roxo));
+    border-color: transparent;
+    color: #fff;
+}
+
+/* ── Formulário ── */
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.config-secao {
+    background: var(--cfg-card);
+    border: 1px solid var(--cfg-borda);
+    border-radius: var(--cfg-raio);
+    padding: 1.25rem 1.5rem;
+    scroll-margin-top: 5rem;
+}
+
+.config-secao-titulo {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--cfg-rosa-escuro);
+    margin: 0 0 1.125rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--cfg-borda);
+}
+
+/* ── Campo em linha (toggle) ── */
+
+.config-campo-linha {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid var(--cfg-borda);
+    margin-bottom: 1rem;
+}
+
+.config-campo-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--cfg-texto);
+}
+
+.config-campo-hint {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--cfg-texto-suave);
+    margin-top: 0.125rem;
+}
+
+/* ── Grid de campos ── */
+
+.config-campos-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 540px) {
+    .config-campos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ── Campos ── */
+
+.input-field {
+    margin-bottom: 0;
+}
+
+.config-secao > .input-field {
+    margin-top: 1rem;
+}
+
+.input-field label {
+    display: block;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--cfg-texto);
+    margin-bottom: 0.375rem;
+}
+
+.section-hint {
+    font-size: 0.8125rem;
+    color: var(--cfg-texto-suave);
+    margin: -0.5rem 0 1rem;
+    line-height: 1.5;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 1.5px solid var(--cfg-borda);
+    border-radius: 0.5rem;
+    background: var(--cfg-fundo);
+    color: var(--cfg-texto);
+    font-size: 0.875rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 5rem;
+    line-height: 1.5;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--cfg-rosa);
+    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.12);
+    background: #fff;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #9ca3af;
+}
+
+select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+}
+
+/* ── Senha ── */
+
+.password-wrap {
+    position: relative;
+}
+
+.password-wrap input {
+    padding-right: 2.75rem;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    color: var(--cfg-texto-suave);
+    display: flex;
+    transition: color 0.2s;
+}
+
+.toggle-password:hover {
+    color: var(--cfg-rosa);
+}
+
+/* ── Switch ── */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2.75rem;
+    height: 1.5rem;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #d1d5db;
+    border-radius: 2rem;
+    transition: 0.25s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 1.125rem;
+    height: 1.125rem;
+    left: 3px;
+    bottom: 3px;
+    background: #fff;
+    border-radius: 50%;
+    transition: 0.25s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+input:checked + .slider {
+    background: linear-gradient(to right, var(--cfg-rosa), var(--cfg-roxo));
+}
+
+input:checked + .slider::before {
+    transform: translateX(1.25rem);
+}
+
+/* ── Feedback ── */
+
+.feedback-message {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feedback-message.success {
+    background: var(--cfg-sucesso-bg);
+    color: var(--cfg-sucesso-texto);
+}
+
+.feedback-message.error {
+    background: var(--cfg-erro-bg);
+    color: var(--cfg-erro-texto);
+}
+
+/* ── Botões ── */
+
+.save-btn {
+    padding: 0.625rem 1.25rem;
+    background: linear-gradient(to right, var(--cfg-rosa), var(--cfg-roxo));
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.1s;
+    white-space: nowrap;
+}
+
+.save-btn:hover {
+    opacity: 0.9;
+}
+
+.save-btn:active {
+    transform: scale(0.98);
+}
+
+.save-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.btn-secundario {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--cfg-texto-suave);
+    text-decoration: none;
+    border: 1.5px solid var(--cfg-borda);
+    background: var(--cfg-card);
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-secundario:hover {
+    border-color: var(--cfg-rosa);
+    color: var(--cfg-rosa);
+}
+
+/* ── Rodapé mobile ── */
+
+.config-rodape-mobile {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.875rem 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--cfg-borda);
+}
+
+.config-rodape-mobile .save-btn {
+    flex: 1;
+}
+
+.config-rodape-mobile .btn-secundario {
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .config-rodape-mobile {
+        display: none;
+    }
+}
+
+/* ── Modo escuro (complementar ao dark-mode.css global) ── */
+
+body.dark-mode input:focus,
+body.dark-mode textarea:focus,
+body.dark-mode select:focus {
+    background-color: #252530;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+    background-color: #252530;
+    color: #ffffff;
+}
+
+body.dark-mode select {
+    appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+body.dark-mode .config-voltar {
+    background: var(--cfg-card);
+    color: #ffffff;
+}
+
+body.dark-mode .config-rodape-mobile {
+    background: rgba(28, 28, 38, 0.95);
+}
+
+body.dark-mode .config-secao,
+body.dark-mode .config-secao-titulo,
+body.dark-mode .config-campo-label,
+body.dark-mode .config-campo-hint,
+body.dark-mode .input-field label,
+body.dark-mode .section-hint,
+body.dark-mode .config-subtitulo,
+body.dark-mode .config-topo h1,
+body.dark-mode .btn-secundario {
+    color: #ffffff;
+}

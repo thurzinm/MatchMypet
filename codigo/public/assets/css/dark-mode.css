@@ -1,0 +1,632 @@
+/* ── Modo escuro global — MatchMyPet ── */
+
+html.dark-mode {
+  color-scheme: dark;
+
+  --fundo: #111118;
+  --branco: #1c1c26;
+  --texto: #ffffff;
+  --texto-suave: #ffffff;
+  --borda: #2d2d3a;
+  --rosa-claro: #3b1a2e;
+
+  --cfg-fundo: #111118;
+  --cfg-card: #1c1c26;
+  --cfg-texto: #ffffff;
+  --cfg-texto-suave: #ffffff;
+  --cfg-borda: #2d2d3a;
+  --cfg-sucesso-bg: #14532d;
+  --cfg-sucesso-texto: #ffffff;
+  --cfg-erro-bg: #7f1d1d;
+  --cfg-erro-texto: #ffffff;
+}
+
+html.dark-mode body {
+  background-color: var(--fundo);
+  color: #ffffff;
+}
+
+html.dark-mode .cabecalho,
+html.dark-mode header {
+  background: var(--branco);
+  border-bottom-color: var(--borda);
+}
+
+html.dark-mode .navegacao-desktop a,
+html.dark-mode nav a,
+html.dark-mode .botao-entrar,
+html.dark-mode .btn-entrar,
+html.dark-mode .botao-menu,
+html.dark-mode .link-auth.botao-sair {
+  color: #ffffff;
+}
+
+html.dark-mode .navegacao-mobile {
+  background: var(--branco);
+  border-color: var(--borda);
+}
+
+html.dark-mode .navegacao-mobile a {
+  color: #ffffff;
+  border-bottom-color: var(--borda);
+}
+
+html.dark-mode .cartao,
+html.dark-mode .config-card,
+html.dark-mode .config-perfil-card,
+html.dark-mode .form-section,
+html.dark-mode .info-card,
+html.dark-mode .horarios-card,
+html.dark-mode .faq-card,
+html.dark-mode .login-card,
+html.dark-mode .modal-content,
+html.dark-mode .modal-body,
+html.dark-mode .cartao-historia,
+html.dark-mode .cartao-animal,
+html.dark-mode .cartao-produto,
+html.dark-mode .produto-card,
+html.dark-mode .cartao-clinica,
+html.dark-mode .cartao-beneficio,
+html.dark-mode .cartao-parceiro,
+html.dark-mode .carrinho-painel,
+html.dark-mode aside section {
+  background: var(--branco);
+  border-color: var(--borda);
+  color: var(--texto);
+}
+
+html.dark-mode .estatisticas,
+html.dark-mode .pagina,
+html.dark-mode .pagina-config,
+html.dark-mode main {
+  background-color: var(--fundo);
+}
+
+html.dark-mode .sidebar-perfil,
+html.dark-mode .capa-info,
+html.dark-mode .sidebar-coluna .cartao {
+  background: var(--branco);
+}
+
+html.dark-mode .sidebar-perfil {
+  background: linear-gradient(135deg, #3b1a2e 0%, #2a1a3d 100%);
+}
+
+html.dark-mode input,
+html.dark-mode textarea,
+html.dark-mode .campo-grupo input,
+html.dark-mode .search-bar input,
+html.dark-mode .talk-footer input,
+html.dark-mode .config-campo input,
+html.dark-mode .config-campo textarea {
+  background-color: #252530;
+  color: var(--texto);
+  border-color: var(--borda);
+}
+
+html.dark-mode select,
+html.dark-mode .campo select,
+html.dark-mode .campo-grupo select,
+html.dark-mode .config-campo select,
+html.dark-mode .form-group select,
+html.dark-mode .filtro-container select,
+html.dark-mode .filtro-select {
+  background-color: #252530;
+  color: var(--texto);
+  border-color: var(--borda);
+  appearance: none;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+html.dark-mode input::placeholder,
+html.dark-mode textarea::placeholder {
+  color: rgba(255, 255, 255, 0.65);
+}
+
+html.dark-mode input:focus,
+html.dark-mode textarea:focus,
+html.dark-mode select:focus {
+  background-color: #2d2d3a;
+  border-color: var(--rosa, #ec4899);
+}
+
+html.dark-mode select:focus {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 1rem;
+}
+
+html.dark-mode .botao-secundario,
+html.dark-mode .botao-branco,
+html.dark-mode .botao-cancelar,
+html.dark-mode .btn-registrar,
+html.dark-mode .btn-secondary,
+html.dark-mode .config-voltar,
+html.dark-mode .btn-fechar-modal {
+  background: #252530;
+  color: var(--texto);
+  border-color: var(--borda);
+}
+
+html.dark-mode .botao-secundario:hover,
+html.dark-mode .botao-branco:hover,
+html.dark-mode .botao-cancelar:hover,
+html.dark-mode .btn-registrar:hover,
+html.dark-mode .btn-secondary:hover {
+  background: #2d2d3a;
+}
+
+html.dark-mode .info-item p,
+html.dark-mode .bio,
+html.dark-mode .arroba,
+html.dark-mode .chat-last-msg,
+html.dark-mode .historia-texto,
+html.dark-mode .pessoa-label {
+  color: #ffffff;
+}
+
+html.dark-mode .badge-tipo {
+  background: var(--rosa-claro);
+  color: #ffffff;
+}
+
+html.dark-mode .animal-foto > div {
+  background: #252530 !important;
+  color: #ffffff !important;
+}
+
+html.dark-mode .podiuma-card,
+html.dark-mode .ranking-item,
+html.dark-mode .destaque-ranking {
+  background: var(--branco);
+  border-color: var(--borda);
+}
+
+html.dark-mode .filtro-container,
+html.dark-mode .produto-detalhe,
+html.dark-mode .produto-info-card {
+  background: var(--branco);
+  border-color: var(--borda);
+}
+
+html.dark-mode .tag-categoria {
+  background: var(--rosa-claro);
+  color: #ffffff;
+}
+
+html.dark-mode .loja-hero {
+  background: linear-gradient(135deg, #2a1a3d 0%, #1a1028 100%);
+}
+
+html.dark-mode .form-group label {
+  color: #ffffff;
+}
+
+html.dark-mode .btn-perfil {
+  background: var(--rosa-claro);
+  color: #ffffff;
+}
+
+html.dark-mode .pagina-login {
+  background:
+    radial-gradient(circle at 15% 20%, rgba(236, 72, 153, 0.1), transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(147, 51, 234, 0.1), transparent 42%),
+    var(--fundo);
+}
+
+html.dark-mode .login-marca-subtitulo,
+html.dark-mode .login-voltar {
+  color: #ffffff;
+}
+
+html.dark-mode .modal-footer {
+  background: var(--branco);
+  border-top-color: var(--borda);
+}
+
+html.dark-mode .talk-screen,
+html.dark-mode .talk-sidebar {
+  background: var(--branco);
+}
+
+html.dark-mode .talk-sidebar,
+html.dark-mode .sidebar-header,
+html.dark-mode .search-bar {
+  border-color: var(--borda);
+}
+
+html.dark-mode .chat-item {
+  border-bottom-color: var(--borda);
+}
+
+html.dark-mode .chat-item:hover {
+  background: #252530;
+}
+
+html.dark-mode .chat-item.active {
+  background: var(--rosa-claro);
+}
+
+html.dark-mode .chat-name {
+  color: var(--texto);
+}
+
+html.dark-mode .talk-container {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.06), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.06), transparent 50%),
+    var(--fundo);
+}
+
+html.dark-mode .talk-header,
+html.dark-mode .talk-footer {
+  background: var(--branco);
+  border-color: var(--borda);
+}
+
+html.dark-mode .talk-header-info h3 {
+  color: var(--texto);
+}
+
+html.dark-mode .incoming {
+  background: var(--branco);
+  color: var(--texto);
+  border-color: var(--borda);
+}
+
+html.dark-mode .attach-btn {
+  background: #252530;
+  border-color: var(--borda);
+  color: #ffffff;
+}
+
+html.dark-mode .config-perfil-banner {
+  background: linear-gradient(135deg, #3b1a2e 0%, #2a1a3d 100%);
+}
+
+html.dark-mode .config-avatar {
+  background: #252530;
+  color: var(--texto);
+}
+
+html.dark-mode .config-rodape-mobile {
+  background: rgba(28, 28, 38, 0.95);
+  border-top-color: var(--borda);
+}
+
+html.dark-mode .config-aba {
+  color: #ffffff;
+}
+
+html.dark-mode .config-aba.ativo {
+  color: #ffffff;
+  border-bottom-color: var(--rosa, #ec4899);
+}
+
+html.dark-mode .toggle-slider {
+  background: #4b5563;
+}
+
+html.dark-mode .toggle-switch input:checked + .toggle-slider {
+  background: var(--rosa, #ec4899);
+}
+
+html.dark-mode .rodape,
+html.dark-mode footer {
+  background: #0a0a0f;
+  color: #ffffff;
+}
+
+html.dark-mode .fundo-rodape,
+html.dark-mode .footer-bottom {
+  border-top-color: var(--borda);
+}
+
+html.dark-mode .formulario-pet,
+html.dark-mode .secao-formulario {
+  background: var(--branco);
+  border-color: var(--borda);
+}
+
+html.dark-mode .upload-area {
+  background: #252530;
+  border-color: var(--borda);
+  color: #ffffff;
+}
+
+html.dark-mode .toast {
+  background: var(--branco);
+  color: #ffffff;
+  border-color: var(--borda);
+}
+
+html.dark-mode .toast-mensagem,
+html.dark-mode .toast-fechar {
+  color: #ffffff !important;
+}
+
+html.dark-mode .botao-sair:hover {
+  color: #ffffff;
+}
+
+html.dark-mode .item-estatistica .numero-estatistica {
+  color: var(--texto);
+}
+
+html.dark-mode .item-estatistica p {
+  color: #ffffff;
+}
+
+html.dark-mode h3,
+html.dark-mode h2,
+html.dark-mode h4 {
+  color: var(--texto);
+}
+
+html.dark-mode code,
+html.dark-mode pre {
+  background: #252530;
+  color: #ffffff;
+}
+
+html.dark-mode .barra-info {
+  background-color: var(--branco);
+}
+
+html.dark-mode .menu li a {
+  color: #ffffff;
+}
+
+/* ── Texto branco global — sobrescreve cores fixas de todas as páginas ── */
+
+html.dark-mode :where(
+  p, span, label, h1, h2, h3, h4, h5, h6,
+  li, td, th, a, dt, dd, small, strong, em,
+  input, textarea, select, option, button,
+  .toast-mensagem, .feedback-message,
+  .config-subtitulo, .config-campo-hint, .section-hint,
+  .campo-grupo label, .login-titulo, .taxa-adocao p,
+  .cidade-resgatador, .taxa-texto span, .historia-data,
+  .botao-sair, .link-auth, .auth-header
+) {
+  color: #ffffff !important;
+}
+
+html.dark-mode .logotipo-texto {
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+  background: linear-gradient(to right, #ec4899, #9333ea);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+html.dark-mode .config-secao,
+html.dark-mode .config-secao-titulo,
+html.dark-mode .config-campo-label,
+html.dark-mode .input-field label,
+html.dark-mode .config-painel-info strong,
+html.dark-mode .config-painel-info span,
+html.dark-mode .config-topo h1 {
+  color: #ffffff !important;
+}
+
+html.dark-mode .config-aba.ativo {
+  color: #ffffff !important;
+}
+
+body.dark-mode {
+  --cfg-fundo: #111118;
+  --cfg-card: #1c1c26;
+  --cfg-texto: #ffffff;
+  --cfg-texto-suave: #ffffff;
+  --cfg-borda: #2d2d3a;
+  color: #ffffff;
+}
+
+/* Bootstrap e bibliotecas externas */
+html.dark-mode .modal-title,
+html.dark-mode .modal-header,
+html.dark-mode .modal-body,
+html.dark-mode .modal-footer,
+html.dark-mode .form-label,
+html.dark-mode .text-muted {
+  color: #ffffff !important;
+}
+
+html.dark-mode .btn-close {
+  filter: invert(1);
+}
+
+html.dark-mode .nav-mobile-ronan {
+  background: var(--branco);
+  border-top-color: var(--borda);
+}
+
+html.dark-mode .nav-mobile-ronan a {
+  color: var(--texto);
+}
+
+html.dark-mode .acoes-menu-mobile-ronan {
+  border-top-color: var(--borda);
+}
+
+html.dark-mode .botao-menu-ronan {
+  color: var(--texto);
+}
+
+html.dark-mode .botao-configuracoes {
+  background: #2d2d3a;
+  color: #ffffff;
+  border-color: #3d3d4a;
+}
+
+html.dark-mode .botao-configuracoes:hover {
+  background: #3d3d4a;
+  color: #ffffff;
+  border-color: #ec4899;
+}
+
+/* ── Feed de match (talk.html) ── */
+
+html.dark-mode #feedView {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.08), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.08), transparent 50%),
+    var(--fundo);
+}
+
+html.dark-mode .chat-view {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(236, 72, 153, 0.06), transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(147, 51, 234, 0.06), transparent 50%),
+    var(--fundo);
+}
+
+html.dark-mode #feedView .pet-card {
+  border-color: var(--borda);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+html.dark-mode #feedView .info-button,
+html.dark-mode #feedView .floating-action.reject,
+html.dark-mode #feedView .round-action.reject {
+  background: #252530;
+  border: 1px solid var(--borda);
+  color: #ef4444 !important;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+html.dark-mode #feedView .info-button {
+  color: var(--roxo, #9333ea) !important;
+}
+
+html.dark-mode #feedView .tags span,
+html.dark-mode .feed-modal .profile-tags span {
+  background: var(--rosa-claro);
+  color: #ffffff;
+}
+
+html.dark-mode #feedView .short-info div,
+html.dark-mode .feed-modal .profile-grid div {
+  background: #252530;
+  border-color: var(--borda);
+}
+
+html.dark-mode #feedView .text-button {
+  color: var(--rosa, #ec4899);
+}
+
+html.dark-mode .feed-modal .modal-card {
+  border-color: var(--borda);
+  box-shadow: 0 36px 90px rgba(0, 0, 0, 0.5);
+}
+
+html.dark-mode .feed-modal .close-button {
+  background: #252530;
+  color: #ffffff;
+  border: 1px solid var(--borda);
+}
+
+html.dark-mode .feed-modal .description {
+  color: #ffffff;
+}
+
+html.dark-mode .feed-modal .btn.secondary {
+  background: #252530;
+  color: #ffffff;
+  border: 1px solid var(--borda);
+}
+
+html.dark-mode .feed-modal .btn.secondary:hover {
+  background: #2d2d3a;
+}
+
+html.dark-mode .btn-descobrir-pets {
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.2);
+}
+
+html.dark-mode .btn-descobrir-pets.ativo {
+  box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.35);
+}
+
+html.dark-mode .btn-ver-conversas,
+html.dark-mode .btn-voltar-feed {
+  background: #252530;
+  border-color: var(--borda);
+  color: #ffffff;
+}
+
+html.dark-mode .btn-ver-conversas:hover,
+html.dark-mode .btn-voltar-feed:hover {
+  border-color: var(--rosa, #ec4899);
+  color: var(--rosa, #ec4899);
+  background: var(--rosa-claro);
+}
+
+html.dark-mode .feed-modal .section-label {
+  color: var(--rosa, #ec4899) !important;
+}
+
+html.dark-mode .feed-modal .btn.primary {
+  color: #ffffff !important;
+}
+
+html.dark-mode #feedView .swipe-hint span {
+  color: var(--rosa, #ec4899);
+}
+
+html.dark-mode #feedView .feed-stat {
+  background: var(--branco);
+  border-color: var(--borda);
+}
+
+html.dark-mode #feedView .feed-stat-num {
+  color: var(--rosa, #ec4899);
+}
+
+html.dark-mode #feedView .feed-filter {
+  background: #252530;
+  border-color: var(--borda);
+  color: #ffffff;
+}
+
+html.dark-mode #feedView .feed-filter.ativo {
+  color: #ffffff !important;
+}
+
+html.dark-mode #feedView .feed-progress {
+  background: rgba(236, 72, 153, 0.15);
+}
+
+html.dark-mode #feedView .feed-empty {
+  background: var(--branco);
+  border-color: var(--borda);
+}
+
+html.dark-mode #feedView .pet-tipo-badge {
+  background: #252530;
+  color: #ffffff;
+}
+
+html.dark-mode #feedView .feed-header-texto h2 {
+  -webkit-text-fill-color: transparent;
+}
+
+html.dark-mode .sidebar-titulo {
+  background: linear-gradient(135deg, #3b1a2e 0%, #2a1a3d 100%);
+}
+
+html.dark-mode .sidebar-titulo h2 {
+  color: var(--texto);
+}
+
+html.dark-mode .sidebar-empty {
+  color: var(--texto-suave);
+  border-color: var(--borda);
+}

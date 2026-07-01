@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../assets/js/dark-mode.js"></script>
+    <title>Match - MatchMyPet</title>
+    <link rel="stylesheet" href="../../assets/css/cabecalho.css">
+    <link rel="stylesheet" href="../../assets/css/auth-header.css">
+    <link rel="stylesheet" href="../../assets/css/talk.css">
+    <link rel="stylesheet" href="../../assets/css/match-feed.css">
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css">
+    <link rel="stylesheet" href="../../assets/css/responsive.css">
+</head>
+<body>
+
+<header class="cabecalho">
+    <div class="cabecalho-interno">
+        <a href="../../about.html" class="logotipo">
+            <span class="logotipo-icone">♥</span>
+            <span class="logotipo-texto">MatchMyPet</span>
+        </a>
+
+        <nav class="navegacao-desktop">
+            <a href="../../about.html">Início</a>
+            <a href="talk.html" class="ativo">Match</a>
+            <a href="../telas%20ronan/reportar.html">Reportar</a>
+            <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+            <a href="../pedro-aguiar/index.html">Produtos</a>
+            <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+            <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+            <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+            <a href="../../equipe.html">Equipe</a>
+            <a href="../telas%20ronan/contato.html">Contato</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+            <a href="../login/login.html" class="botao-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+            <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil">👤 Perfil</a>
+        </div>
+
+        <button class="botao-menu" type="button" onclick="alternarMenu()">☰</button>
+    </div>
+
+    <nav class="navegacao-mobile" id="menuMobile">
+        <a href="../../about.html">Início</a>
+        <a href="talk.html">Match</a>
+        <a href="../telas%20ronan/reportar.html">Reportar</a>
+        <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+        <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="../../equipe.html">Equipe</a>
+        <a href="../telas%20ronan/contato.html">Contato</a>
+        <div class="acoes-menu-mobile">
+            <a href="../login/login.html" class="link-auth" data-login-href="../login/login.html">Entrar</a>
+            <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil-mobile">Perfil</a>
+        </div>
+    </nav>
+</header>
+
+<div class="pagina-match">
+<div class="talk-screen sem-sidebar modo-feed">
+    <aside class="talk-sidebar" id="talkSidebar" hidden>
+        <div class="sidebar-titulo">
+            <h2>Meus matches</h2>
+            <span id="sidebarMatchCount" class="sidebar-contador">0</span>
+        </div>
+
+        <div class="search-bar">
+            <svg class="search-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.3-4.3"/>
+            </svg>
+            <input type="text" id="buscaMatch" placeholder="Buscar pet pelo nome..." autocomplete="off">
+        </div>
+
+        <p id="sidebarEmpty" class="sidebar-empty">Dê match em um pet para iniciar uma conversa.</p>
+
+        <div class="chat-list" id="chatList"></div>
+    </aside>
+
+    <main class="talk-container">
+        <div id="feedView" class="feed-view">
+            
+            <section class="match-section">
+                <header class="feed-header">
+                    <div class="feed-header-texto">
+                        <h2>Descubra seu match</h2>
+                        <p class="swipe-hint">Gostou? Clique em <span>♥</span> ou deslize para a direita</p>
+                    </div>
+                    <div class="feed-stats" aria-live="polite">
+                        <div class="feed-stat">
+                            <span id="statMatches" class="feed-stat-num">0</span>
+                            <span class="feed-stat-label">Matches</span>
+                        </div>
+                        <div class="feed-stat">
+                            <span id="statSalvos" class="feed-stat-num">0</span>
+                            <span class="feed-stat-label">Salvos</span>
+                        </div>
+                        <div class="feed-stat">
+                            <span id="statRestantes" class="feed-stat-num">0</span>
+                            <span class="feed-stat-label">Restantes</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="feed-filters" role="group" aria-label="Filtrar pets">
+                    <button type="button" class="feed-filter ativo" data-filtro="todos">Todos</button>
+                    <button type="button" class="feed-filter" data-filtro="Cachorro">Cachorros</button>
+                    <button type="button" class="feed-filter" data-filtro="Gato">Gatos</button>
+                    <button type="button" class="feed-filter" data-filtro="Pequeno">Pequeno porte</button>
+                </div>
+
+                <div class="feed-progress" aria-hidden="true">
+                    <div id="feedProgressBar" class="feed-progress-bar"></div>
+                </div>
+
+                <div class="match-content">
+                    <button id="btnPassar" class="floating-action reject" aria-label="Passar animal">×</button>
+
+                    <div class="pet-card-stack">
+                        <article id="petCardNext" class="pet-card pet-card-behind" aria-hidden="true"></article>
+                        <article id="petCard" class="pet-card" tabindex="0" aria-label="Abrir perfil do pet">
+                            <div class="photo-area">
+                                <img id="petFoto" src="" alt="Foto do pet" />
+                                <span id="petTipo" class="pet-tipo-badge">Cachorro</span>
+                                <div id="petStatus" class="status-pill">Disponível para adoção</div>
+                                <span id="petMatchScore" class="match-score">92% match</span>
+                                <button id="btnInfo" class="info-button" aria-label="Ver perfil completo do pet">i</button>
+                            </div>
+
+                            <div class="card-body">
+                                <h1 id="petNome">Nome</h1>
+                                <p id="petLocalizacao" class="location">⌖ Localização</p>
+                                <div id="petTags" class="tags"></div>
+
+                                <div class="short-info">
+                                    <div><strong>Idade</strong><span id="petIdade">-</span></div>
+                                    <div><strong>Porte</strong><span id="petPorte">-</span></div>
+                                    <div><strong>Raça</strong><span id="petRaca">-</span></div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <button id="btnGostei" class="floating-action approve" aria-label="Gostei do animal">♥</button>
+                </div>
+
+                <div class="bottom-actions">
+                    <button id="btnPassarMobile" class="round-action reject" aria-label="Passar">×</button>
+                    <button id="btnGosteiMobile" class="round-action approve" aria-label="Gostei">♥</button>
+                </div>
+
+                <div class="feed-status">
+                    <span id="contadorPets">1 de 1</span>
+                    <button id="btnReiniciar" class="text-button">Reiniciar feed</button>
+                </div>
+
+                <div id="feedEmpty" class="feed-empty hidden">
+                    <div class="feed-empty-icon">🐾</div>
+                    <h3>Você viu todos os pets!</h3>
+                    <p id="feedEmptyResumo">0 matches registrados nesta sessão.</p>
+                    <div class="feed-empty-acoes">
+                        <button type="button" id="btnReiniciarEmpty" class="btn-feed-primary">Explorar novamente</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="chatView" class="chat-view" hidden>
+            <header class="talk-header">
+                <button type="button" id="btnVoltarFeed" class="btn-voltar-feed" title="Voltar ao Match" aria-label="Voltar ao Match">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    <span class="btn-voltar-texto">Voltar</span>
+                </button>
+                <img src="" alt="" class="avatar">
+                <div class="talk-header-info">
+                    <h3></h3>
+                    <p><span class="status-dot"></span> Online</p>
+                </div>
+            </header>
+
+            <div class="talk-body" id="chatMessages"></div>
+
+            <footer class="talk-footer">
+                <button type="button" class="attach-btn" title="Anexar">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/>
+                    </svg>
+                </button>
+                <input type="text" id="userInput" placeholder="Escreva sua mensagem...">
+                <button type="button" id="sendBtn" class="send-btn" title="Enviar">
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                        <path fill="currentColor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </button>
+            </footer>
+        </div>
+    </main>
+</div>
+</div>
+
+<section id="modalPerfil" class="feed-modal hidden" aria-hidden="true">
+    <div class="modal-backdrop" data-close-modal></div>
+
+    <article class="modal-card">
+        <button id="btnFecharModal" class="close-button" aria-label="Fechar perfil">×</button>
+
+        <div class="profile-image">
+            <img id="perfilFoto" src="" alt="Foto do pet no perfil" />
+        </div>
+
+        <div class="profile-info">
+            <p class="section-label">Perfil do Pet</p>
+            <h2 id="perfilNome">Nome</h2>
+            <p id="perfilResumo" class="profile-subtitle">Tipo • Raça • Porte • Idade</p>
+            <div id="perfilTags" class="profile-tags"></div>
+            <p id="perfilDescricao" class="description"></p>
+
+            <div class="profile-grid">
+                <div><strong>Localização</strong><span id="perfilLocalizacao">-</span></div>
+                <div><strong>Responsável</strong><span id="perfilResponsavel">-</span></div>
+                <div><strong>Status</strong><span id="perfilStatus">-</span></div>
+                <div><strong>Contato</strong><span id="perfilContato">-</span></div>
+            </div>
+
+            <div class="profile-actions">
+                <button id="btnTenhoInteresse" class="btn primary">Tenho interesse</button>
+                <button id="btnSalvarPerfil" class="btn secondary">Salvar perfil</button>
+            </div>
+        </div>
+    </article>
+</section>
+
+<div id="feedToast" class="feed-toast hidden"></div>
+
+<script src="../../assets/js/layout.js"></script>
+<script src="../../assets/js/auth-header.js"></script>
+<script src="../../assets/js/match-storage.js"></script>
+<script src="../../assets/js/match-feed.js"></script>
+<script src="../../assets/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../assets/js/dark-mode.js"></script>
+    <title>Parcerias - MatchMyPet</title>
+    <link rel="stylesheet" href="../../assets/css/clinicas-parceiros.css" />
+    <link rel="stylesheet" href="../../assets/css/auth-header.css" />
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="cabecalho-interno">
+        <a href="../../about.html" class="logotipo">
+          <span class="logotipo-icone">♥</span>
+          <span class="logotipo-texto">MatchMyPet</span>
+        </a>
+
+        <nav class="navegacao-desktop">
+          <a href="../../about.html">Início</a>
+          <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+          <a href="../telas%20ronan/reportar.html">Reportar</a>
+          <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+          <a href="../pedro-aguiar/index.html">Produtos</a>
+          <a href="clinicas.html">Clínicas</a>
+          <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+          <a href="parcerias.html">Parcerias</a>
+          <a href="../telas%20ronan/contato.html">Contato</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+          <a href="../login/login.html" class="botao-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil">👤 Perfil</a>
+        </div>
+
+        <button class="botao-menu" onclick="alternarMenu()">☰</button>
+      </div>
+
+      <nav class="navegacao-mobile" id="menuMobile">
+        <a href="../../about.html">Início</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="../telas%20ronan/reportar.html">Reportar</a>
+        <a href="../henrique-souza-telas/registroPet.html">Resgatar</a>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="clinicas.html">Clínicas</a>
+        <a href="../henrique-souza-telas/ranking.html">Ranking</a>
+        <a href="parcerias.html">Parcerias</a>
+        <a href="../telas%20ronan/contato.html">Contato</a>
+        <div class="acoes-menu-mobile">
+          <a href="../login/login.html" class="link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="../henrique-souza-telas/userPerfil.html" class="botao-perfil-mobile">Perfil</a>
+        </div>
+      </nav>
+    </header>
+
+    <div class="topo-pagina">
+      <div class="container topo-conteudo">
+        <span class="topo-icone">🤝</span>
+        <h1>Nossas Parcerias</h1>
+        <p>Conheça as ONGs, marcas e empresas que apoiam nossa missão de conectar pets a lares amorosos</p>
+      </div>
+    </div>
+
+    <main class="pagina">
+      <div class="container">
+
+        <section class="secao-beneficios">
+          <div class="titulo-secao">
+            <div class="titulo-icone">♥</div>
+            <h2>Por que ser parceiro?</h2>
+          </div>
+          <div class="grade-beneficios">
+            <div class="cartao-beneficio">
+              <div class="icone">🌍</div>
+              <h3>Impacto social</h3>
+              <p>Contribua diretamente para reduzir o abandono animal e promover adoções responsáveis.</p>
+            </div>
+            <div class="cartao-beneficio">
+              <div class="icone">📢</div>
+              <h3>Visibilidade</h3>
+              <p>Sua marca aparece para milhares de tutores e adotantes engajados na causa animal.</p>
+            </div>
+            <div class="cartao-beneficio">
+              <div class="icone">💜</div>
+              <h3>Rede colaborativa</h3>
+              <p>Faça parte de uma comunidade de clínicas, ONGs e empresas unidas pelo bem-estar animal.</p>
+            </div>
+          </div>
+        </section>
+
+        <div class="barra-filtros">
+          <span class="contador-itens" id="contador-parceiros">Carregando...</span>
+          <select class="filtro-select" id="filtro-tipo">
+            <option value="todos">Todos os tipos</option>
+            <option value="ONG">ONG</option>
+            <option value="Marca">Marca</option>
+            <option value="Empresa">Empresa</option>
+            <option value="Instituição">Instituição</option>
+          </select>
+        </div>
+
+        <div class="grade-parceiros" id="grade-parceiros"></div>
+
+        <section class="chamada-acao">
+          <span class="chamada-icone">✉️</span>
+          <h2>Quer fazer parte?</h2>
+          <p>Se sua ONG, empresa ou marca compartilha dos nossos valores, entre em contato e vamos construir essa parceria juntos.</p>
+          <a href="../telas%20ronan/contato.html" class="botao-branco">Fale conosco</a>
+        </section>
+
+      </div>
+    </main>
+
+    <footer class="rodape">
+      <div class="container">
+        <div class="grade-rodape">
+          <div class="marca-rodape">
+            <div class="logotipo-rodape">
+              <span class="logotipo-icone">♥</span>
+              <span>MatchMyPet</span>
+            </div>
+            <p>Deslize • Conecte • Adote. Encontre seu pet perfeito através de matches inteligentes.</p>
+          </div>
+          <div class="coluna-rodape">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../../about.html">Início</a></li>
+              <li><a href="../Arthur-Lopes-telas/talk.html">Match</a></li>
+              <li><a href="../telas%20ronan/reportar.html">Reportar</a></li>
+              <li><a href="../henrique-souza-telas/ranking.html">Ranking</a></li>
+            </ul>
+          </div>
+          <div class="coluna-rodape">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="../pedro-aguiar/index.html">Produtos</a></li>
+              <li><a href="clinicas.html">Clínicas</a></li>
+              <li><a href="parcerias.html">Parcerias</a></li>
+              <li><a href="../telas%20ronan/contato.html">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="fundo-rodape">
+          <p>&copy; 2026 AdotaPet. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function alternarMenu() {
+        document.getElementById('menuMobile').classList.toggle('aberto');
+      }
+    </script>
+    <script src="../../assets/js/parcerias.js"></script>
+    <script src="../../assets/js/layout.js"></script>
+    <script src="../../assets/js/auth-header.js"></script>
+  </body>
+</html>

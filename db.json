@@ -1,0 +1,22 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "nome": "Thor",
+      "idade": "2 anos",
+      "porte": "Médio",
+      "sexo": "Macho",
+      "descricao": "Brincalhão e amigável",
+      "foto": "/codigo/public/modulos/guilherme-feed/assets/pet1.png"
+    },
+    {
+      "id": 2,
+      "nome": "Luna",
+      "idade": "1 ano",
+      "porte": "Pequeno",
+      "sexo": "Fêmea",
+      "descricao": "Carinhosa e tranquila",
+      "foto": "/codigo/public/modulos/guilherme-feed/assets/pet2.png"
+    }
+  ]
+}

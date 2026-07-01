@@ -1,0 +1,149 @@
+/* Cabeçalho global — MatchMyPet */
+
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--branco, #fff);
+  border-bottom: 1px solid var(--borda, rgba(0, 0, 0, 0.1));
+  flex-shrink: 0;
+}
+
+.cabecalho-interno {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.logotipo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logotipo-icone {
+  font-size: 1.5rem;
+  color: var(--rosa, #ec4899);
+}
+
+.logotipo-texto {
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: linear-gradient(to right, var(--rosa, #ec4899), var(--roxo, #9333ea));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.navegacao-desktop {
+  display: none;
+  gap: 1.5rem;
+}
+
+.navegacao-desktop a {
+  font-size: 0.875rem;
+  color: #374151;
+  transition: color 0.2s;
+}
+
+.navegacao-desktop a:hover {
+  color: var(--rosa, #ec4899);
+}
+
+.acoes-cabecalho {
+  display: none;
+  align-items: center;
+  gap: 1rem;
+}
+
+.botao-entrar {
+  font-size: 0.875rem;
+  color: #374151;
+  transition: color 0.2s;
+}
+
+.botao-entrar:hover {
+  color: var(--rosa, #ec4899);
+}
+
+.botao-perfil {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, var(--rosa, #ec4899), var(--roxo, #9333ea));
+  color: #fff;
+  border-radius: var(--arredondamento, 0.625rem);
+  font-size: 0.875rem;
+  transition: opacity 0.2s;
+}
+
+.botao-perfil:hover {
+  opacity: 0.9;
+}
+
+.botao-menu {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #374151;
+}
+
+.navegacao-mobile {
+  display: none;
+  flex-direction: column;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--borda, rgba(0, 0, 0, 0.1));
+  background: var(--branco, #fff);
+}
+
+.navegacao-mobile.aberto {
+  display: flex;
+}
+
+.navegacao-mobile a {
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.navegacao-mobile a:hover {
+  color: var(--rosa, #ec4899);
+}
+
+.acoes-menu-mobile {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--borda, rgba(0, 0, 0, 0.1));
+}
+
+.botao-perfil-mobile {
+  padding: 0.5rem 1rem;
+  background: linear-gradient(to right, var(--rosa, #ec4899), var(--roxo, #9333ea));
+  color: #fff !important;
+  border-radius: var(--arredondamento, 0.625rem);
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .navegacao-desktop {
+    display: flex;
+  }
+
+  .acoes-cabecalho {
+    display: flex;
+  }
+
+  .botao-menu {
+    display: none;
+  }
+}

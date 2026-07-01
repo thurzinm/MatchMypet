@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../assets/js/dark-mode.js"></script>
+    <title>Perfil - MatchMyPet</title>
+    <link rel="stylesheet" href="../../assets/css/userPerfil.css" />
+    <link rel="stylesheet" href="../../assets/css/auth-header.css" />
+    <link rel="stylesheet" href="../../assets/css/dark-mode.css" />
+    <link rel="stylesheet" href="../../assets/css/responsive.css" />
+  </head>
+  <body>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+      <div class="cabecalho-interno">
+        <a href="../../about.html" class="logotipo">
+          <span class="logotipo-icone">♥</span>
+          <span class="logotipo-texto">MatchMyPet</span>
+        </a>
+
+        <nav class="navegacao-desktop">
+          <a href="../../about.html">Início</a>
+          <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+          <a href="../telas%20ronan/reportar.html">Reportar</a>
+          <a href="registroPet.html">Resgatar</a>
+          <a href="../pedro-aguiar/index.html">Produtos</a>
+          <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+          <a href="ranking.html">Ranking</a>
+          <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+          <a href="../telas%20ronan/contato.html">Contato</a>
+        </nav>
+
+        <div class="acoes-cabecalho">
+          <a href="../login/login.html" class="botao-entrar link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="userPerfil.html" class="botao-perfil">👤 Perfil</a>
+        </div>
+
+        <button class="botao-menu" onclick="alternarMenu()">☰</button>
+      </div>
+
+      <nav class="navegacao-mobile" id="menuMobile">
+        <a href="../../about.html">Início</a>
+        <a href="../Arthur-Lopes-telas/talk.html">Match</a>
+        <a href="../telas%20ronan/reportar.html">Reportar</a>
+        <a href="registroPet.html">Resgatar</a>
+        <a href="../pedro-aguiar/index.html">Produtos</a>
+        <a href="../clinicas-parceiros/clinicas.html">Clínicas</a>
+        <a href="ranking.html">Ranking</a>
+        <a href="../clinicas-parceiros/parcerias.html">Parcerias</a>
+        <a href="../telas%20ronan/contato.html">Contato</a>
+        <div class="acoes-menu-mobile">
+          <a href="../login/login.html" class="link-auth" data-login-href="../login/login.html">Entrar</a>
+          <a href="userPerfil.html" class="botao-perfil-mobile">Perfil</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="pagina">
+
+      <!-- Capa -->
+      <div class="capa">
+        <img src="https://images.unsplash.com/photo-1450778869180-41d0601e046e?w=1200&h=400&fit=crop" alt="Capa" />
+      </div>
+
+      <div class="container">
+
+        <!-- Cabeçalho do Perfil -->
+        <div class="cabecalho-perfil">
+          <div class="cabecalho-perfil-esquerda">
+            <div class="avatar"></div>
+            <div class="info-usuario">
+              <h1>Maria Costa</h1>
+              <p class="arroba">@mariacosta</p>
+              <span class="badge-tipo">Resgatador</span>
+            </div>
+          </div>
+          <a href="../Arthur-Lopes-telas/settings.html" class="botao-configuracoes">⚙ Editar Perfil</a>
+        </div>
+
+        <!-- Grade principal: sidebar + conteúdo -->
+        <div class="grade-principal">
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+
+            <!-- Bio -->
+            <div class="cartao">
+              <h2>Sobre</h2>
+              <p class="bio">Resgatadora de animais há 5 anos. Amo ajudar pets a encontrarem um lar cheio de amor ❤️</p>
+              <ul class="lista-info">
+                <li><span class="info-icone">📍</span> São Paulo, SP</li>
+                <li><span class="info-icone">📅</span> Membro desde Janeiro 2020</li>
+                <li><span class="info-icone">📞</span> (11) 98765-4321</li>
+                <li><span class="info-icone">✉️</span> maria@example.com</li>
+              </ul>
+            </div>
+
+            <!-- Stats -->
+            <div class="cartao">
+              <h2>Estatísticas</h2>
+
+              <div class="stat-linha">
+                <div class="stat-esquerda">
+                  <div class="stat-icone rosa">♥</div>
+                  <span>Resgates</span>
+                </div>
+                <span class="stat-numero">89</span>
+              </div>
+
+              <div class="stat-linha">
+                <div class="stat-esquerda">
+                  <div class="stat-icone verde">★</div>
+                  <span>Adoções</span>
+                </div>
+                <span class="stat-numero">76</span>
+              </div>
+
+              <div class="stat-linha">
+                <div class="stat-esquerda">
+                  <div class="stat-icone azul">R$</div>
+                  <span>Doações</span>
+                </div>
+                <span class="stat-numero">R$ 3.500</span>
+              </div>
+
+              <div class="taxa-adocao">
+                <p>Taxa de Adoção</p>
+                <strong>85%</strong>
+              </div>
+            </div>
+
+          </aside>
+
+          <!-- Conteúdo Principal -->
+          <section class="conteudo-principal">
+            <div class="cartao">
+              <div class="cabecalho-animais">
+                <h2>Animais Cadastrados</h2>
+                <a href="registroPet.html" class="botao-adicionar">Adicionar Animal</a>
+              </div>
+
+              <div class="grade-animais">
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+      <div class="container">
+        <div class="grade-rodape">
+          <div class="marca-rodape">
+            <div class="logotipo-rodape">
+              <span class="logotipo-icone">♥</span>
+              <span>MatchMyPet</span>
+            </div>
+            <p>Deslize • Conecte • Adote. Encontre seu pet perfeito através de matches inteligentes.</p>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Navegação</h3>
+            <ul>
+              <li><a href="../../about.html">Início</a></li>
+              <li><a href="../Arthur-Lopes-telas/talk.html">Match</a></li>
+              <li><a href="../telas%20ronan/reportar.html">Reportar</a></li>
+              <li><a href="ranking.html">Ranking</a></li>
+            </ul>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="../pedro-aguiar/index.html">Produtos</a></li>
+              <li><a href="../clinicas-parceiros/clinicas.html">Clínicas</a></li>
+              <li><a href="../clinicas-parceiros/parcerias.html">Parcerias</a></li>
+              <li><a href="../telas%20ronan/contato.html">Contato</a></li>
+            </ul>
+          </div>
+
+          <div class="coluna-rodape">
+            <h3>Redes Sociais</h3>
+            <div class="redes-sociais">
+              <a href="#">f</a>
+              <a href="#">in</a>
+              <a href="#">tw</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="fundo-rodape">
+          <p>&copy; 2026 AdotaPet. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../assets/js/userPerfil.js"></script>
+    <script src="../../assets/js/layout.js"></script>
+    <script src="../../assets/js/auth-header.js"></script>
+  </body>
+</html>
