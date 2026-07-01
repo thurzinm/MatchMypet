@@ -102,7 +102,7 @@ function finalizarCompra() {
   var usuario = obterUsuarioCorrenteLoja();
   if (!usuario || !usuario.id) {
     alert('Faça login para finalizar a compra.');
-    window.location.href = '/index.html';
+    window.location.href = '../../modulos/login/login.html';
     return;
   }
 

@@ -11,12 +11,8 @@
 
 
 // Página inicial de Login
-const LOGIN_URL = "/index.html";
+const LOGIN_URL = "/modulos/login/login.html";
 const HOME_URL = "/about.html";
-
-function isLoginPage(pagina) {
-    return pagina === LOGIN_URL || pagina === "/";
-}
 const PROFILE_URL = "/modulos/henrique-souza-telas/userPerfil.html";
 let RETURN_URL = HOME_URL;
 const API_PATH = '';
@@ -30,7 +26,7 @@ var usuarioCorrente = {};
 // Inicializa a aplicação de Login
 function initLoginApp () {
     let pagina = window.location.pathname;
-    if (!isLoginPage(pagina)) {
+    if (pagina != LOGIN_URL) {
         // CONFIGURA A URLS DE RETORNO COMO A PÁGINA ATUAL
         sessionStorage.setItem('returnURL', pagina);
         RETURN_URL = pagina;

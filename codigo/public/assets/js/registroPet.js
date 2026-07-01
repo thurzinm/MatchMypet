@@ -32,7 +32,7 @@ if (formulario) {
 
     if (!usuarioCorrente) {
       alert('Você precisa estar logado para cadastrar um animal.');
-      window.location.href = '/index.html';
+      window.location.href = '../login/login.html';
       return;
     }
 
