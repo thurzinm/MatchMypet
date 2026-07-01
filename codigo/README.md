@@ -73,7 +73,7 @@ O GitHub Pages hospeda apenas arquivos estáticos (HTML, CSS e JS). A API contin
 
 URLs possíveis:
 
-* Com domínio personalizado (arquivo `public/CNAME`): `https://matchmypet.com.br`
+* Com domínio personalizado (arquivo `public/CNAME`): `https://matchmypet.web`
 * Sem domínio: `https://thurzinm.github.io/MatchMypet/`
 
 ### 2. Publicar a API (back-end)
@@ -86,7 +86,7 @@ URLs possíveis:
 
 ### 3. Domínio personalizado (opcional)
 
-Se usar `matchmypet.com.br`, configure no provedor de DNS um registro **CNAME** apontando para `thurzinm.github.io` e mantenha o arquivo `public/CNAME`.
+Se usar `matchmypet.web`, configure no provedor de DNS um registro **CNAME** apontando para `thurzinm.github.io` e mantenha o arquivo `public/CNAME` com o valor `matchmypet.web`. No GitHub, em **Settings → Pages → Custom domain**, informe `matchmypet.web` e aguarde a verificação DNS/HTTPS.
 
 ## Endpoints da API
 

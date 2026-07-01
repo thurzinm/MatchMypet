@@ -4,6 +4,7 @@
   var host = window.location.hostname;
   var isLocal = host === 'localhost' || host === '127.0.0.1';
   var repoName = 'MatchMypet';
+  // Produção com domínio personalizado: https://matchmypet.web (CNAME → thurzinm.github.io)
   var basePath = '/';
 
   if (!isLocal && host.endsWith('github.io')) {
@@ -28,6 +29,7 @@
     loginUrl: joinUrl(basePath, 'modulos/login/login.html'),
     homeUrl: joinUrl(basePath, 'about.html'),
     profileUrl: joinUrl(basePath, 'modulos/henrique-souza-telas/userPerfil.html'),
+    publicPaths: ['/about.html', '/equipe.html'],
     api: function (path) {
       return joinUrl(apiBaseUrl, path);
     },

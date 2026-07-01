@@ -36,7 +36,38 @@ function normalizePath(pathname) {
 }
 
 function isLoginPage(pathname) {
-  return normalizePath(pathname) === normalizePath(LOGIN_URL);
+  var relativePath = stripBasePath(pathname);
+  return (
+    normalizePath(pathname) === normalizePath(LOGIN_URL) ||
+    relativePath === '/modulos/login/login.html' ||
+    relativePath === '/' ||
+    relativePath === '/index.html'
+  );
+}
+
+function stripBasePath(pathname) {
+  var basePath = (window.SITE_CONFIG && SITE_CONFIG.basePath) || "/";
+  var normalizedBase = normalizePath(basePath);
+  var normalizedPath = normalizePath(pathname);
+
+  if (normalizedBase !== "/" && normalizedPath.indexOf(normalizedBase) === 0) {
+    normalizedPath = normalizedPath.slice(normalizedBase.length) || "/";
+  }
+
+  return normalizedPath;
+}
+
+function isPublicPage(pathname) {
+  var publicPaths = (window.SITE_CONFIG && SITE_CONFIG.publicPaths) || [
+    "/about.html",
+    "/equipe.html",
+  ];
+
+  var relativePath = stripBasePath(pathname);
+
+  return publicPaths.some(function (publicPath) {
+    return normalizePath(publicPath) === relativePath;
+  });
 }
 
 // Objeto para o banco de dados de usuários baseado em JSON
@@ -48,6 +79,18 @@ var usuarioCorrente = {};
 // Inicializa a aplicação de Login
 function initLoginApp () {
     let pagina = window.location.pathname;
+    if (isPublicPage(pagina)) {
+        let usuarioCorrenteJSON = sessionStorage.getItem('usuarioCorrente');
+        if (usuarioCorrenteJSON) {
+            usuarioCorrente = JSON.parse(usuarioCorrenteJSON);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            showUserInfo('userInfo');
+        });
+        return;
+    }
+
     if (!isLoginPage(pagina)) {
         // CONFIGURA A URLS DE RETORNO COMO A PÁGINA ATUAL
         sessionStorage.setItem('returnURL', pagina);
@@ -88,6 +131,9 @@ function carregarUsuarios(callback) {
     .catch(error => {
         console.error('Erro ao ler usuários via API JSONServer:', error);
         displayMessage("Erro ao ler usuários", "erro");
+        if (typeof callback === 'function') {
+            callback();
+        }
     });
 }
 
