@@ -1,4 +1,9 @@
-const API_PATH = '';
+function apiUrl(path) {
+  if (window.SITE_CONFIG && typeof SITE_CONFIG.api === 'function') {
+    return SITE_CONFIG.api(path);
+  }
+  return '/' + String(path || '').replace(/^\/+/, '');
+}
 
 function alternarMenu() {
   const menu = document.getElementById('menuMobile');
@@ -32,7 +37,7 @@ if (formulario) {
 
     if (!usuarioCorrente) {
       alert('Você precisa estar logado para cadastrar um animal.');
-      window.location.href = '../login/login.html';
+      window.location.href = (window.SITE_CONFIG && SITE_CONFIG.loginUrl) || '/modulos/login/login.html';
       return;
     }
 
@@ -59,7 +64,7 @@ if (formulario) {
     };
 
     try {
-      const resposta = await fetch(`${API_PATH}/animais`, {
+      const resposta = await fetch(apiUrl('animais'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(animal)

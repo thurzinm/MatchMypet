@@ -1,5 +1,11 @@
-const API_PATH = '';
-const LOGIN_URL = '/modulos/login/login.html';
+const LOGIN_URL = (window.SITE_CONFIG && SITE_CONFIG.loginUrl) || '/modulos/login/login.html';
+
+function apiUrl(path) {
+  if (window.SITE_CONFIG && typeof SITE_CONFIG.api === 'function') {
+    return SITE_CONFIG.api(path);
+  }
+  return '/' + String(path || '').replace(/^\/+/, '');
+}
 
 const texts = {
     pt: {
@@ -137,7 +143,7 @@ function formatarTelefone(valor) {
 }
 
 async function carregarUsuario() {
-    const resposta = await fetch(`${API_PATH}/usuarios/${usuarioCorrente.id}`);
+    const resposta = await fetch(apiUrl(`usuarios/${usuarioCorrente.id}`));
     if (!resposta.ok) throw new Error('Usuário não encontrado');
     return resposta.json();
 }
@@ -203,7 +209,7 @@ async function salvarAlteracoes() {
     if (saveBtnMobile) saveBtnMobile.disabled = true;
 
     try {
-        const resposta = await fetch(`${API_PATH}/usuarios/${usuarioCorrente.id}`, {
+        const resposta = await fetch(apiUrl(`usuarios/${usuarioCorrente.id}`), {
             method: 'PATCH',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dados)

@@ -11,11 +11,33 @@
 
 
 // Página inicial de Login
-const LOGIN_URL = "/modulos/login/login.html";
-const HOME_URL = "/about.html";
-const PROFILE_URL = "/modulos/henrique-souza-telas/userPerfil.html";
+const LOGIN_URL = (window.SITE_CONFIG && SITE_CONFIG.loginUrl) || '/modulos/login/login.html';
+const HOME_URL = (window.SITE_CONFIG && SITE_CONFIG.homeUrl) || '/about.html';
+const PROFILE_URL = (window.SITE_CONFIG && SITE_CONFIG.profileUrl) || '/modulos/henrique-souza-telas/userPerfil.html';
 let RETURN_URL = HOME_URL;
-const API_PATH = '';
+
+function apiUrl(path) {
+  if (window.SITE_CONFIG && typeof SITE_CONFIG.api === 'function') {
+    return SITE_CONFIG.api(path);
+  }
+  return '/' + String(path || '').replace(/^\/+/, '');
+}
+
+function normalizePath(pathname) {
+  try {
+    pathname = decodeURIComponent(pathname);
+  } catch (e) {
+    /* mantém pathname original */
+  }
+  if (pathname.length > 1 && pathname.endsWith('/')) {
+    pathname = pathname.slice(0, -1);
+  }
+  return pathname.toLowerCase();
+}
+
+function isLoginPage(pathname) {
+  return normalizePath(pathname) === normalizePath(LOGIN_URL);
+}
 
 // Objeto para o banco de dados de usuários baseado em JSON
 var db_usuarios = [];
@@ -26,7 +48,7 @@ var usuarioCorrente = {};
 // Inicializa a aplicação de Login
 function initLoginApp () {
     let pagina = window.location.pathname;
-    if (pagina != LOGIN_URL) {
+    if (!isLoginPage(pagina)) {
         // CONFIGURA A URLS DE RETORNO COMO A PÁGINA ATUAL
         sessionStorage.setItem('returnURL', pagina);
         RETURN_URL = pagina;
@@ -57,7 +79,7 @@ function initLoginApp () {
 
 
 function carregarUsuarios(callback) {
-    fetch(`${API_PATH}/usuarios`)
+    fetch(apiUrl('usuarios'))
     .then(response => response.json())
     .then(data => {
         db_usuarios = data;
@@ -112,7 +134,7 @@ function addUser (nome, login, senha, email) {
     let usuario = { "login": login, "senha": senha, "nome": nome, "email": email };
 
     // Envia dados do novo usuário para ser inserido no JSON Server
-    fetch(`${API_PATH}/usuarios`, {
+    fetch(apiUrl('usuarios'), {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -1,4 +1,11 @@
-const API_PARCEIROS = '/parceiros';
+function apiUrl(path) {
+  if (window.SITE_CONFIG && typeof SITE_CONFIG.api === 'function') {
+    return SITE_CONFIG.api(path);
+  }
+  return '/' + String(path || '').replace(/^\/+/, '');
+}
+
+const API_PARCEIROS = apiUrl('parceiros');
 
 let todosParceiros = [];
 

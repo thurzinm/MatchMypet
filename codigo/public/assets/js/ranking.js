@@ -1,4 +1,9 @@
-const API_PATH = '';
+function apiUrl(path) {
+  if (window.SITE_CONFIG && typeof SITE_CONFIG.api === 'function') {
+    return SITE_CONFIG.api(path);
+  }
+  return '/' + String(path || '').replace(/^\/+/, '');
+}
 
 function alternarMenu() {
   document.getElementById('menuMobile').classList.toggle('aberto');
@@ -13,7 +18,7 @@ async function carregarResgatadores() {
   const lista = document.querySelector('.lista-resgatadores');
 
   try {
-    const resposta = await fetch(`${API_PATH}/resgatadores?_sort=resgates&_order=desc`);
+    const resposta = await fetch(apiUrl('resgatadores?_sort=resgates&_order=desc'));
     if (!resposta.ok) throw new Error('Erro ao buscar resgatadores');
     const resgatadores = await resposta.json();
 
@@ -62,7 +67,7 @@ async function carregarHistorias() {
   const grade = document.querySelector('.grade-historias');
 
   try {
-    const resposta = await fetch(`${API_PATH}/historias?_sort=pontuacaoMatch&_order=desc`);
+    const resposta = await fetch(apiUrl('historias?_sort=pontuacaoMatch&_order=desc'));
     if (!resposta.ok) throw new Error('Erro ao buscar histórias');
     const historias = await resposta.json();
 

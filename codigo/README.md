@@ -61,6 +61,33 @@ Instale o **[Node.js](https://nodejs.org/)** (versão LTS). Em seguida:
 
 > Dica: caso apareça o erro `EADDRINUSE: address already in use :::3000`, significa que a porta 3000 já está em uso. Encerre o processo anterior (ex.: `lsof -ti:3000 | xargs kill -9`) antes de rodar `npm start` novamente.
 
+## Publicação no GitHub Pages
+
+O GitHub Pages hospeda apenas arquivos estáticos (HTML, CSS e JS). A API continua precisando de um servidor Node.js separado.
+
+### 1. Publicar o site (front-end)
+
+1. No GitHub, abra **Settings → Pages**.
+2. Em **Build and deployment**, escolha **Source: GitHub Actions**.
+3. Faça push na branch `main`. O workflow `.github/workflows/deploy-pages.yml` publica automaticamente a pasta `codigo/public`.
+
+URLs possíveis:
+
+* Com domínio personalizado (arquivo `public/CNAME`): `https://matchmypet.com.br`
+* Sem domínio: `https://thurzinm.github.io/MatchMypet/`
+
+### 2. Publicar a API (back-end)
+
+1. Crie uma conta no [Render](https://render.com/).
+2. Conecte o repositório e use o blueprint `codigo/render.yaml` (ou crie um **Web Service** com root `codigo`, build `npm install`, start `node api-server.js`).
+3. Copie a URL gerada (ex.: `https://matchmypet-api.onrender.com`).
+4. Atualize `public/assets/js/site-config.js` com essa URL em `apiBaseUrl`.
+5. Faça push novamente para atualizar o site.
+
+### 3. Domínio personalizado (opcional)
+
+Se usar `matchmypet.com.br`, configure no provedor de DNS um registro **CNAME** apontando para `thurzinm.github.io` e mantenha o arquivo `public/CNAME`.
+
 ## Endpoints da API
 
 O JSON Server expõe automaticamente um endpoint REST para cada coleção do `db.json`:

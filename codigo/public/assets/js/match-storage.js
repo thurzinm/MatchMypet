@@ -1,6 +1,14 @@
-const MATCH_STORAGE_API = '/matchContatos';
-const FEED_PROGRESS_API = '/matchFeedProgress';
-const LOGIN_URL = '/modulos/login/login.html';
+const LOGIN_URL = (window.SITE_CONFIG && SITE_CONFIG.loginUrl) || '/modulos/login/login.html';
+
+function apiUrl(path) {
+  if (window.SITE_CONFIG && typeof SITE_CONFIG.api === 'function') {
+    return SITE_CONFIG.api(path);
+  }
+  return '/' + String(path || '').replace(/^\/+/, '');
+}
+
+const MATCH_STORAGE_API = apiUrl('matchContatos');
+const FEED_PROGRESS_API = apiUrl('matchFeedProgress');
 const LOCAL_KEY_PREFIX = 'matchmypet:contatos:';
 const FEED_LOCAL_KEY_PREFIX = 'matchmypet:feed:';
 

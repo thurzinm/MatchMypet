@@ -1,7 +1,14 @@
 // Módulo pedro-aguiar — consumo da API REST do JSON Server (db/db.json)
 
-const API_PRODUTOS = '/produtos';
-const API_PEDIDOS = '/pedidos';
+function apiUrl(path) {
+  if (window.SITE_CONFIG && typeof SITE_CONFIG.api === 'function') {
+    return SITE_CONFIG.api(path);
+  }
+  return '/' + String(path || '').replace(/^\/+/, '');
+}
+
+const API_PRODUTOS = apiUrl('produtos');
+const API_PEDIDOS = apiUrl('pedidos');
 
 function obterUsuarioCorrenteLoja() {
   var json = sessionStorage.getItem('usuarioCorrente');

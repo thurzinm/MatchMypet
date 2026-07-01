@@ -1,4 +1,9 @@
-const API_PATH = '';
+function apiUrl(path) {
+  if (window.SITE_CONFIG && typeof SITE_CONFIG.api === 'function') {
+    return SITE_CONFIG.api(path);
+  }
+  return '/' + String(path || '').replace(/^\/+/, '');
+}
 
 function alternarMenu() {
   document.getElementById('menuMobile').classList.toggle('aberto');
@@ -9,7 +14,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   if (!usuarioCorrente) {
     alert('Você precisa estar logado para acessar o perfil.');
-    window.location.href = '../login/login.html';
+    window.location.href = (window.SITE_CONFIG && SITE_CONFIG.loginUrl) || '/modulos/login/login.html';
     return;
   }
 
@@ -19,7 +24,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
 async function carregarPerfil(usuarioCorrente) {
   try {
-    const resposta = await fetch(`${API_PATH}/usuarios/${usuarioCorrente.id}`);
+    const resposta = await fetch(apiUrl(`usuarios/${usuarioCorrente.id}`));
     if (!resposta.ok) throw new Error('Usuário não encontrado');
     const usuario = await resposta.json();
 
@@ -43,7 +48,7 @@ async function carregarAnimais(usuarioId) {
   const gradeAnimais = document.querySelector('.grade-animais');
 
   try {
-    const resposta = await fetch(`${API_PATH}/animais?usuarioId=${usuarioId}`);
+    const resposta = await fetch(apiUrl(`animais?usuarioId=${usuarioId}`));
     if (!resposta.ok) throw new Error('Erro ao buscar animais');
     const animais = await resposta.json();
 
